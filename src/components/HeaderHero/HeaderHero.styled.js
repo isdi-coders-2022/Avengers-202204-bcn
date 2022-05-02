@@ -6,6 +6,19 @@ const StyledHeaderHero = styled.div`
   background-size: cover;
   width: 100%;
   height: 18rem;
+  z-index: 10 !important;
+`;
+
+export const StyledThumbnail = styled.div`
+  position: absolute;
+  background-image: url(/assets/Alien.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 14rem;
+  height: 301px;
+  top: 8rem;
+  left: 3rem;
+  z-index: 9999;
 `;
 
 export default StyledHeaderHero;
