@@ -1,6 +1,6 @@
 import StyleButtonText from "./StyleButtonText";
 
-const ButtonText = ({ text }) => {
+function ButtonText({ text }) {
   return <StyleButtonText>{text}</StyleButtonText>;
-};
+}
 export default ButtonText;

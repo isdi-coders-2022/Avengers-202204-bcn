@@ -3,7 +3,7 @@ import styled from "styled-components";
 const ButtonText = styled.button`
   display: inline-block;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   position: absolute;
   width: 198px;
   height: 61px;
@@ -15,4 +15,5 @@ const ButtonText = styled.button`
   border-radius: 6px;
   color: #ffffff;
 `;
+
 export default ButtonText;
