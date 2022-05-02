@@ -1,10 +1,20 @@
-// import styled from "styled-components";
+import styled from "styled-components";
 
-// const StyledComicAbout = styled.div`
-//   border: 1px solid #000;
-//   background: center no-repeat url(/assets/Alien.jpeg);
-//   width: 100%;
-//   height: 23rem;
-// `;
+const StyledComicAbout = styled.div`
+  position: relative;
+  overflow: hidden;
+  background: no-repeat url(/assets/Alien.jpeg);
+  background-size: cover;
+  width: 100%;
+  height: 63rem;
+`;
 
-// export default StyledComicAbout;
+export const StyledBackgroundFilter = styled.div`
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  position: absolute;
+  inset: 0;
+`;
+
+export default StyledComicAbout;

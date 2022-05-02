@@ -1,7 +1,11 @@
-// import StyledComicAbout from "./ComicAbout.styled";
+import StyledComicAbout, { StyledBackgroundFilter } from "./ComicAbout.styled";
 
 const ComicAbout = () => {
-  return <div className="container-fluid"></div>;
+  return (
+    <StyledComicAbout className="container-fluid">
+      <StyledBackgroundFilter className="" />
+    </StyledComicAbout>
+  );
 };
 
 export default ComicAbout;
