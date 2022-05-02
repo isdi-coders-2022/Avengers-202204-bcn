@@ -1,13 +1,17 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Comic from "./components/Info/Comic/Comic";
-import LayoutComponent from "./components/LayoutComponent/LayoutComponent";
+import Layout from "./components/Layout/Layout";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
-      <LayoutComponent></LayoutComponent>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Layout>
     </div>
   );
 }
-
 export default App;
