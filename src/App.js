@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Layout from "./components/Layout/Layout";
-import Home from "./pages/Home";
+
+import ButtonText from "./components/ButtonTextComponent/ButtonText";
 
 function App() {
   return (
@@ -14,5 +14,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
