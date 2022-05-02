@@ -1,9 +1,9 @@
 import styled from "styled-components";
+
 const ButtonText = styled.button`
-  display: flex;
+  display: inline-block;
   flex-direction: row;
-  align-items: flex-start;
-  padding: 33px 183px;
+  align-items: center;
   position: absolute;
   width: 198px;
   height: 61px;
@@ -13,5 +13,6 @@ const ButtonText = styled.button`
   border: 2px solid #000000;
   box-sizing: border-box;
   border-radius: 6px;
+  color: #ffffff;
 `;
 export default ButtonText;

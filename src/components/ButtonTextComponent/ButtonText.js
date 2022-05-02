@@ -1,8 +1,6 @@
 import StyleButtonText from "./StyleButtonText";
 
-const ButtonText = (text) => {
-  <StyleButtonText>
-    return <button className="create edit modify">{text}</button>;
-  </StyleButtonText>;
+const ButtonText = ({ text }) => {
+  return <StyleButtonText>{text}</StyleButtonText>;
 };
 export default ButtonText;
