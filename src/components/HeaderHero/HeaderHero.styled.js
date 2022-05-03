@@ -2,23 +2,24 @@ import styled from "styled-components";
 
 const StyledHeaderHero = styled.div`
   overflow: hidden;
-  background: ${(props) => `url(/assets/${props.src})`} no-repeat center center;
-  background-size: cover;
   width: 100%;
-  height: 18rem;
+  height: 15rem;
   z-index: 10 !important;
-`;
 
-export const StyledThumbnail = styled.div`
-  position: absolute;
-  background-image: ${(props) => `url(/assets/${props.src})`};
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 9rem;
-  height: 301px;
-  top: 12.5rem;
-  left: 3rem;
-  z-index: 9999;
+  .thumbnail {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .comic-cover {
+    position: absolute;
+    width: 12rem;
+    height: 301px;
+    top: 8rem;
+    left: 3rem;
+    z-index: 9999;
+  }
 `;
 
 export default StyledHeaderHero;
