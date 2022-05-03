@@ -9,6 +9,7 @@ const HeaderHero = (title) => {
         alt={title}
       />
       <img className="comic-cover" src="/assets/Alien.jpeg" alt={title} />
+
     </StyledHeaderHero>
   );
 };
