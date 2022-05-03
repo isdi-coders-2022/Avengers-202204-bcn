@@ -2,8 +2,9 @@ import StyledComicAbout, { StyledBackgroundFilter } from "./ComicAbout.styled";
 
 const ComicAbout = () => {
   return (
-    <StyledComicAbout className="container-fluid">
-      <StyledBackgroundFilter className="" />
+    <StyledComicAbout>
+      <img src="/assets/Alien.jpeg" alt="Alien" />
+      <StyledBackgroundFilter />
     </StyledComicAbout>
   );
 };
