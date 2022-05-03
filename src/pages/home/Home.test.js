@@ -7,13 +7,11 @@ import Home from "./Home";
 describe("Given a component Home", () => {
   describe("When invoked with the text 'Home'", () => {
     test("Then it should render a div element with the text 'Home", () => {
-      const text = "Home";
-
       render(<Home />, { wrapper: MemoryRouter });
 
-      const expectedText = screen.getByText(text);
+      const expectedImg = screen.getByRole("img");
 
-      expect(expectedText).toBeInTheDocument();
+      expect(expectedImg).toBeInTheDocument();
     });
   });
 });

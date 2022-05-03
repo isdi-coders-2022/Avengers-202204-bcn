@@ -6,11 +6,7 @@ function Home() {
   return (
     <HomeStyles>
       <Info />
-      <Comic
-        imageUrl="/assets/Alien.jpeg"
-        title="Alien"
-        info="Info about alien akjgalgkòjgòagfòaG"
-      />
+      <Comic imageUrl="/assets/Alien.jpeg" title="Alien" info="Alien" />
     </HomeStyles>
   );
 }
