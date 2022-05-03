@@ -8,10 +8,10 @@ import StyledComicAbout, {
 
 const ComicAbout = () => {
   return (
-
     <>
       <StyledComicAbout>
-        <img src="/assets/Alien.jpeg" alt="Alien" />
+        <img src="/assets/Alien.jpeg" className="comic-image" alt="Alien" />
+
         <StyledBackgroundFilter />
         <StyledDivContainer>
           <StyledTitle>Alien</StyledTitle>
@@ -22,7 +22,6 @@ const ComicAbout = () => {
         </StyledAboutContainer>
       </StyledComicAbout>
     </>
-
   );
 };
 
