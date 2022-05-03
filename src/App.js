@@ -7,6 +7,7 @@ import HeaderHero from "./components/HeaderHero/HeaderHero";
 import Navbar from "./components/Navbar/Navbar";
 
 import Home from "./pages/Home";
+import Wantlist from "./pages/Wantlist";
 
 function App() {
   return (
@@ -16,8 +17,10 @@ function App() {
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/wantlist" element={<Wantlist />} />
         </Routes>
       </Layout>
+
       <Navbar />
     </div>
   );
