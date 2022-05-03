@@ -14,9 +14,9 @@ export const StyledThumbnail = styled.div`
   background-image: ${(props) => `url(/assets/${props.src})`};
   background-repeat: no-repeat;
   background-size: contain;
-  width: 14rem;
+  width: 9rem;
   height: 301px;
-  top: 8rem;
+  top: 12.5rem;
   left: 3rem;
   z-index: 9999;
 `;
