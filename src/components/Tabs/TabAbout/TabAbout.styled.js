@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 const StyledTabAbout = styled.div`
-  .TabAbout p {
-    font-size: 2rem;
-    text-align: center;
+  .TabAbout {
+    &__content {
+      font-size: 1.1rem;
+    }
   }
 
   ul {
@@ -16,25 +17,27 @@ const StyledTabAbout = styled.div`
   }
 
   .creator-list {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     margin-right: 2rem;
 
     &__row {
-      width: 100%;
+      width: max-content;
       display: flex;
-
+      flex-direction: column;
       justify-content: space-between;
     }
 
     &__row:last-child {
-      margin-top: 2rem;
+      margin-right: 1rem;
     }
 
     &__item {
       width: max-content;
       display: flex;
       flex-direction: column;
+      padding-bottom: 2rem;
 
       &--bold {
         font-weight: 500;
@@ -42,7 +45,7 @@ const StyledTabAbout = styled.div`
       }
 
       &--text {
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
     }
   }
