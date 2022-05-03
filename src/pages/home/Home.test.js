@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import Home from "./Home";
 import { MemoryRouter } from "react-router-dom";
+import Home from "./Home";
 
 describe("Given a component Home", () => {
   describe("When invoked with the text 'Home'", () => {
