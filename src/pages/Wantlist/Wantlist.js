@@ -1,11 +1,11 @@
-import Form from "../components/Form/Form";
-import HomeStyles from "./home/Home.styled";
+import FormText from "../../components/Form/Form";
+import HomeStyles from "../home/Home.styled";
 
 const Wantlist = () => {
   return (
     <HomeStyles>
       Wantlist
-      <Form />
+      <FormText />
     </HomeStyles>
   );
 };
