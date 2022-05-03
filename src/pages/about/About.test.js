@@ -2,17 +2,17 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./Home";
+import About from "./About";
 
 describe("Given a component Home", () => {
-  describe("When invoked with the text '4 Comics'", () => {
-    test("Then it should render a span element with the text '4 Comics", () => {
-      const text = "4 Comics";
+  describe("When invoked with the text 'About Comics'", () => {
+    test("Then it should render a span element with the text 'About Comics", () => {
+      const text = "About Comics";
 
       render(
         <BrowserRouter>
           <Routes>
-            <Route path="*" element={<Home />}></Route>
+            <Route path="*" element={<About />}></Route>
           </Routes>
         </BrowserRouter>
       );
