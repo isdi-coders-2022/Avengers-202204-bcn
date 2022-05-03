@@ -1,9 +1,13 @@
+import { useState } from "react";
 import InfoStyle from "./Info.styled";
 
-const Info = ({ numberOfComics }) => {
+const Info = () => {
+  const [numberOfComics, setNumberOfComics] = useState(4);
+
   return (
-    <InfoStyle>
-      <p>{numberOfComics} comics in the list</p>
+    <InfoStyle className="info">
+      <span className="info info__title">Comics List</span>
+      <span className="info info__state">{numberOfComics} Comics</span>
     </InfoStyle>
   );
 };

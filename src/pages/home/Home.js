@@ -1,10 +1,11 @@
 import Comic from "../../components/Comic/Comic";
+import Info from "../../components/Info/Info";
 import HomeStyles from "./Home.styled";
 
 function Home() {
   return (
     <HomeStyles>
-      Home
+      <Info />
       <Comic
         imageUrl="/assets/Alien.jpeg"
         title="Alien"
