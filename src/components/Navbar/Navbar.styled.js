@@ -9,6 +9,7 @@ const NavbarStyle = styled.div`
     width: 100%;
     justify-content: space-around;
     background-color: #e8e4e4;
+    z-index: 9999;
 
     a {
       color: inherit;
