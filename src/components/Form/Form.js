@@ -1,35 +1,13 @@
-import StyleForm from "./StyleForm";
-
-const Form = ({ label }) => {
+const Form = () => {
   return (
-    <StyleForm>
-      <div>
-        <form>
-          <label htmlFor="title">
-            {label}
-            <input type="text" />
-          </label>
-        </form>
-        <form>
-          <label htmlFor="title">
-            {label}
-            <input type="text" />
-          </label>
-        </form>
-        <form>
-          <label htmlFor="title">
-            {label}
-            <input type="text" />
-          </label>
-        </form>
-        <form>
-          <label htmlFor="title">
-            {label}
-            <input type="text" />
-          </label>
-        </form>
-      </div>
-    </StyleForm>
+    <div>
+      <form>
+        <textInput type="text" title="Comic Title" />
+        <textInput type="text" />
+        <textInput type="text" />
+        <textInput type="text" />
+      </form>
+    </div>
   );
 };
 export default Form;
