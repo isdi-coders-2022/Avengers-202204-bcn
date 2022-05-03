@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ButtonText = styled.button`
+const StyleButtonText = styled.button`
   display: inline-block;
   flex-direction: row;
   align-items: flex-start;
@@ -16,4 +16,4 @@ const ButtonText = styled.button`
   color: #ffffff;
 `;
 
-export default ButtonText;
+export default StyleButtonText;
