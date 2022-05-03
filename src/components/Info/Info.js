@@ -1,4 +1,4 @@
-import InfoStyle from "./Info-Style";
+import InfoStyle from "./Info.styled";
 
 const Info = ({ numberOfComics }) => {
   return (

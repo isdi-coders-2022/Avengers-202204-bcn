@@ -6,7 +6,7 @@ import {
   faBookmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
-import NavbarStyle from "./Navbar-Style";
+import NavbarStyle from "./Navbar.styled";
 
 const Navbar = () => {
   return (

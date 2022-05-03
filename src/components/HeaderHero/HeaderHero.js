@@ -1,13 +1,14 @@
-import StyledHeaderHero, { StyledThumbnail } from "./HeaderHero.styled";
+import StyledHeaderHero from "./HeaderHero.styled";
 
-const HeaderHero = () => {
+const HeaderHero = (title) => {
   return (
-    <StyledHeaderHero
-      data-testid="headerHero"
-      src="Alien.jpeg"
-      className="container-fluid"
-    >
-      <StyledThumbnail src={"Alien.jpeg"} />
+    <StyledHeaderHero data-testid="headerHero">
+      <img
+        className="thumbnail"
+        src="/assets/avengers-banner.jpeg"
+        alt={title}
+      />
+      <img className="comic-cover" src="/assets/Alien.jpeg" alt={title} />
     </StyledHeaderHero>
   );
 };
