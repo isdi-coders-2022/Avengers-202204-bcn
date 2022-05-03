@@ -3,11 +3,10 @@ import "./App.css";
 
 import Layout from "./components/Layout/Layout";
 import About from "./pages/about/About";
-import HeaderHero from "./components/HeaderHero/HeaderHero";
 import Navbar from "./components/Navbar/Navbar";
 
-import Home from "./pages/Home";
 import Wantlist from "./pages/Wantlist";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
