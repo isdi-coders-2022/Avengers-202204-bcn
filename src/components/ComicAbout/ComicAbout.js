@@ -8,6 +8,7 @@ import StyledComicAbout, {
 
 const ComicAbout = () => {
   return (
+
     <>
       <StyledComicAbout>
         <StyledBackgroundFilter className="" />
@@ -20,6 +21,7 @@ const ComicAbout = () => {
         </StyledAboutContainer>
       </StyledComicAbout>
     </>
+
   );
 };
 
