@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 
 import Wantlist from "./pages/Wantlist/Wantlist";
 import Home from "./pages/home/Home";
+import Search from "./components/Search/Search";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           <Route path="/wantlist" element={<Wantlist />} />
         </Routes>
       </Layout>
-
+      <Search active={false} />
       <Navbar />
     </div>
   );
