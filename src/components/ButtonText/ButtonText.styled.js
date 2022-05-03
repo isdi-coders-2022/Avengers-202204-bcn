@@ -6,11 +6,12 @@ const StyleButtonText = styled.button`
   font-size: 20px;
   padding: 10px 60px;
   border-radius: 6px;
-  margin: 10px 0px;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 120px;
   cursor: pointer;
   width: 198px;
   height: 61px;
-  left: 96px;
   top: 627px;
   border: 2px solid #000000;
   box-sizing: border-box;
