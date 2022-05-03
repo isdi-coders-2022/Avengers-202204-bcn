@@ -2,21 +2,18 @@ import styled from "styled-components";
 
 const StyledTabs = styled.div`
   width: 100%;
-  height: auto;
+  height: 10;
   min-height: 400px;
-  margin: 2.5rem 3rem;
-
+  margin-top: 7rem;
+  margin-left: 3.2rem;
+  margin-right: 3.2rem;
+  margin-bottom: 4rem;
+  z-index: 9999;
   color: #fff;
   border-radius: 2rem;
 
-  ul.nav {
-  }
-
   ul.nav li {
-    padding: 1rem;
-    /* list-style: none;
-    text-align: center; */
-    z-index: 9999;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.3s;
     border-bottom-left-radius: 2rem;
@@ -27,12 +24,13 @@ const StyledTabs = styled.div`
     border-radius: 0;
     border-bottom-right-radius: 2rem;
     border-top-right-radius: 2rem;
-    margin-left: 1rem;
+    margin-left: 2rem;
   }
 
   ul.nav li:hover {
     color: rgba(50, 224, 196);
   }
+
   ul.nav li.active {
     color: #39a2db;
   }
