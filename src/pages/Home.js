@@ -1,12 +1,16 @@
-import ButtonText from "../components/ButtonTextComponent/ButtonText";
-
+import Comic from "../components/Comic/Comic";
+import HomeStyles from "./Home.styled";
+import ButtonText from "../components/ButtonText/ButtonText";
 function Home() {
   return (
-    <div>
+    <HomeStyles>
       Home
-      <ButtonText text="CREATE" />
-    </div>
+      <Comic
+        imageUrl="/assets/Alien.jpeg"
+        title="Alien"
+        info="Info about alien akjgalgkòjgòagfòaG"
+      />
+    </HomeStyles>
   );
 }
-
 export default Home;

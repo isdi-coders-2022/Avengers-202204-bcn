@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledHeaderHero = styled.div`
   overflow: hidden;
-  background: url(/assets/Alien.jpeg) no-repeat center center;
+  background: ${(props) => `url(/assets/${props.src})`} no-repeat center center;
   background-size: cover;
   width: 100%;
   height: 18rem;
@@ -11,7 +11,7 @@ const StyledHeaderHero = styled.div`
 
 export const StyledThumbnail = styled.div`
   position: absolute;
-  background-image: url(/assets/Alien.jpeg);
+  background-image: ${(props) => `url(/assets/${props.src})`};
   background-repeat: no-repeat;
   background-size: contain;
   width: 9rem;
