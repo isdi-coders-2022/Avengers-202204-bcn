@@ -1,8 +1,6 @@
-import ButtonText from "../components/ButtonText/ButtonText";
-
 import Comic from "../components/Comic/Comic";
 import HomeStyles from "./Home.styled";
-
+import ButtonText from "../components/ButtonText/ButtonText";
 function Home() {
   return (
     <HomeStyles>
@@ -12,9 +10,7 @@ function Home() {
         title="Alien"
         info="Info about alien akjgalgkòjgòagfòaG"
       />
-      <ButtonText text="CREATE" />
     </HomeStyles>
   );
 }
-
 export default Home;
