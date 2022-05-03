@@ -4,7 +4,7 @@ const HeaderHero = () => {
   return (
     <StyledHeaderHero
       data-testid="headerHero"
-      src={"Alien.jpeg"}
+      src="Alien.jpeg"
       className="container-fluid"
     >
       <StyledThumbnail src={"Alien.jpeg"} />
