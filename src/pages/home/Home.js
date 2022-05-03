@@ -1,4 +1,4 @@
-import Comic from "../components/Comic/Comic";
+import Comic from "../../components/Comic/Comic";
 import HomeStyles from "./Home.styled";
 
 function Home() {
