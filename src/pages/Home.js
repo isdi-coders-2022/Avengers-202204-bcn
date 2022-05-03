@@ -1,11 +1,7 @@
-
-import ButtonText from "../components/ButtonTextComponent/ButtonText";
+import ButtonText from "../components/ButtonText/ButtonText";
 
 import Comic from "../components/Comic/Comic";
 import HomeStyles from "./Home.styled";
-
-import Form from "../components/Form/Form";
-
 
 function Home() {
   return (
