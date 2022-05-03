@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Comic from "./Comic";
+import { MemoryRouter } from "react-router-dom";
 
 describe("Given a Card component function", () => {
   describe("When invoked with an imageUrl", () => {
@@ -10,7 +11,7 @@ describe("Given a Card component function", () => {
       const expectedImgSrc =
         "https://www.milcomics.com/1254117-large_default/el-imparable-spiderman-01.jpg";
 
-      render(<Comic imageUrl={imageUrl} />);
+      render(<Comic imageUrl={imageUrl} />, { wrapper: MemoryRouter });
 
       const imageElement = screen.getByRole("img");
 
@@ -22,7 +23,7 @@ describe("Given a Card component function", () => {
     test("Then it should render an h3 element with the test 'Spiderman' inside", () => {
       const title = "Spiderman";
 
-      render(<Comic title={title} />);
+      render(<Comic title={title} />, { wrapper: MemoryRouter });
 
       const expectedText = screen.getByText(title);
 
