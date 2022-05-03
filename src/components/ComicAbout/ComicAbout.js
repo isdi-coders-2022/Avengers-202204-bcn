@@ -9,7 +9,7 @@ import StyledComicAbout, {
 const ComicAbout = () => {
   return (
     <>
-      <StyledComicAbout className="container-fluid">
+      <StyledComicAbout>
         <StyledBackgroundFilter className="" />
         <StyledDivContainer>
           <StyledTitle>Alien</StyledTitle>

@@ -1,14 +1,37 @@
+import { useState } from "react";
+import TabAbout from "./TabAbout/TabAbout";
+import TabReview from "./TabReview/TabReview";
+
 import StyledTabs from "./Tabs.styled";
 
 const Tabs = () => {
+  const [activeTab, setActiveTab] = useState("aboutComic");
+
+  const handleAboutComic = () => setActiveTab("aboutComic");
+
+  const handleReviews = () => setActiveTab("reviews");
+
   return (
     <StyledTabs className="Tabs">
-      {/* Tab nav */}
       <ul className="nav">
-        <li>Tab 1</li>
-        <li>Tab 2</li>
+        <li
+          className={activeTab === "aboutComic" ? "active" : ""}
+          onClick={handleAboutComic}
+        >
+          About Comics
+        </li>
+
+        <li
+          className={activeTab === "reviews" ? "active" : ""}
+          onClick={handleReviews}
+        >
+          Reviews
+        </li>
       </ul>
-      <div className="outlet">{/* content will be shown here */}</div>
+
+      <div className="outlet">
+        {activeTab === "aboutComic" ? <TabAbout /> : <TabReview />}
+      </div>
     </StyledTabs>
   );
 };
