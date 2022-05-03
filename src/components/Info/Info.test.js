@@ -3,10 +3,10 @@ import "@testing-library/jest-dom";
 import Info from "./Info";
 
 describe("Given an info component function", () => {
-  describe("When invoked with the numberOfComics '3'", () => {
-    test("Then it should render a p element with the text '3 comics in the list' inside", () => {
-      const numberOfCOmics = 3;
-      const text = "3 comics in the list";
+  describe("When invoked with the numberOfComics '4'", () => {
+    test("Then it should render a p element with the text '4 comics", () => {
+      const numberOfCOmics = 4;
+      const text = "4 Comics";
 
       render(<Info numberOfComics={numberOfCOmics} />);
 
