@@ -1,15 +1,12 @@
 import Comic from "../../components/Comic/Comic";
+import Info from "../../components/Info/Info";
 import HomeStyles from "./Home.styled";
 
 function Home() {
   return (
     <HomeStyles>
-      Home
-      <Comic
-        imageUrl="/assets/Alien.jpeg"
-        title="Alien"
-        info="Info about alien akjgalgkòjgòagfòaG"
-      />
+      <Info />
+      <Comic imageUrl="/assets/Alien.jpeg" title="Alien" info="Alien" />
     </HomeStyles>
   );
 }
