@@ -1,10 +1,25 @@
-import StyledComicAbout, { StyledBackgroundFilter } from "./ComicAbout.styled";
+import Tabs from "../Tabs/Tabs";
+import StyledComicAbout, {
+  StyledAboutContainer,
+  StyledBackgroundFilter,
+  StyledDivContainer,
+  StyledTitle,
+} from "./ComicAbout.styled";
 
 const ComicAbout = () => {
   return (
-    <StyledComicAbout className="container-fluid">
-      <StyledBackgroundFilter className="" />
-    </StyledComicAbout>
+    <>
+      <StyledComicAbout className="container-fluid">
+        <StyledBackgroundFilter className="" />
+        <StyledDivContainer>
+          <StyledTitle>Alien</StyledTitle>
+        </StyledDivContainer>
+
+        <StyledAboutContainer>
+          <Tabs />
+        </StyledAboutContainer>
+      </StyledComicAbout>
+    </>
   );
 };
 

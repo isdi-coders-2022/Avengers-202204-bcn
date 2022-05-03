@@ -17,4 +17,27 @@ export const StyledBackgroundFilter = styled.div`
   inset: 0;
 `;
 
+export const StyledDivContainer = styled.div`
+  position: relative;
+  width: 100%;
+`;
+
+export const StyledTitle = styled.h1`
+  color: #fff;
+  font-size: 36px;
+  margin-left: 13rem;
+  margin-top: 2rem;
+  z-index: 10;
+`;
+
+export const StyledAboutContainer = styled.div`
+  position: relative;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+`;
+
 export default StyledComicAbout;
