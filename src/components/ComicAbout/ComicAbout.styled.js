@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
 const StyledComicAbout = styled.div`
-  position: relative;
   overflow: hidden;
-  background: no-repeat url(/assets/Alien.jpeg) 50% 0;
-  background-size: cover;
+  position: relative;
   width: 100%;
   height: 63rem;
+
+  img {
+    object-fit: cover;
+    object-position: 60% top;
+    width: 100%;
+  }
 `;
 
 export const StyledBackgroundFilter = styled.div`

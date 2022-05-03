@@ -10,7 +10,8 @@ const ComicAbout = () => {
   return (
     <>
       <StyledComicAbout>
-        <StyledBackgroundFilter className="" />
+        <img src="/assets/Alien.jpeg" alt="Alien" />
+        <StyledBackgroundFilter />
         <StyledDivContainer>
           <StyledTitle>Alien</StyledTitle>
         </StyledDivContainer>
