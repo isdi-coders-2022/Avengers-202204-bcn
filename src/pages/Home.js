@@ -1,3 +1,4 @@
+
 import ButtonText from "../components/ButtonTextComponent/ButtonText";
 
 import Comic from "../components/Comic/Comic";
@@ -16,12 +17,7 @@ function Home() {
         info="Info about alien akjgalgkòjgòagfòaG"
       />
       <ButtonText text="CREATE" />
-
     </HomeStyles>
-
-      <Form label={"Comic Title"} input={`type="text"`} />
-    </div>
-
   );
 }
 
