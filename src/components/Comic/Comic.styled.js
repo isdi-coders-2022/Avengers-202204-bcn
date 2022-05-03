@@ -3,6 +3,7 @@ import styled from "styled-components";
 const ComicStyles = styled.div`
   .comic {
     position: relative;
+    box-shadow: 0 0 10px 5px;
 
     &__image {
       width: 100%;
@@ -17,7 +18,7 @@ const ComicStyles = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 2rem;
+      padding: 2vw;
     }
   }
 
@@ -29,7 +30,7 @@ const ComicStyles = styled.div`
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 0;
+    opacity: 0.3;
   }
 `;
 
