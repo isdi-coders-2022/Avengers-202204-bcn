@@ -1,6 +1,10 @@
 import ButtonText from "../components/ButtonTextComponent/ButtonText";
+
 import Comic from "../components/Comic/Comic";
 import HomeStyles from "./Home.styled";
+
+import Form from "../components/Form/Form";
+
 
 function Home() {
   return (
@@ -12,7 +16,12 @@ function Home() {
         info="Info about alien akjgalgkòjgòagfòaG"
       />
       <ButtonText text="CREATE" />
+
     </HomeStyles>
+
+      <Form label={"Comic Title"} input={`type="text"`} />
+    </div>
+
   );
 }
 
