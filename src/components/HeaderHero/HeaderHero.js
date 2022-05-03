@@ -2,8 +2,12 @@ import StyledHeaderHero, { StyledThumbnail } from "./HeaderHero.styled";
 
 const HeaderHero = () => {
   return (
-    <StyledHeaderHero className="container-fluid">
-      <StyledThumbnail />
+    <StyledHeaderHero
+      data-testid="headerHero"
+      src={"Alien.jpeg"}
+      className="container-fluid"
+    >
+      <StyledThumbnail src={"Alien.jpeg"} />
     </StyledHeaderHero>
   );
 };
