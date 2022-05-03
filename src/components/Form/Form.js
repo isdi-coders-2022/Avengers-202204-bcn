@@ -1,32 +1,68 @@
+import { useState } from "react";
 import ButtonText from "../ButtonText/ButtonText";
 import StyledForm from "./Form.styled";
 
 const FormText = () => {
+  const [comic, setComic] = useState({
+    title: "",
+    type: "",
+    character: "",
+    description: "",
+  });
   return (
     <StyledForm>
-      <label htmlFor="titleInput">
-        Comic Title:
-        <input id="titleInput" type="text" placeholder="Text" />
-      </label>
-      <label htmlFor="typeInput">
-        Comic Type:
-        <input id="typeInput" type="text" placeholder="Text" />
-      </label>
-      <label htmlFor="characterInput">
-        Main Character Name:
-        <input id="characterInput" type="text" placeholder="Text" />
-      </label>
-      <label htmlFor="descriptionInput">
-        Description:
-        <textarea
-          name=""
-          id="descriptionInput"
-          cols="30"
-          rows="7"
-          placeholder="Text"
-        ></textarea>
-      </label>
-      <ButtonText type="submit" text={"CREATE"} />
+      <form action="url">
+        <label htmlFor="title">
+          Comic Title:
+          <input
+            onChange={(event) =>
+              setComic({ ...comic, title: event.target.value })
+            }
+            value={comic.title}
+            id="title"
+            type="text"
+            placeholder="Text"
+          />
+        </label>
+        <label htmlFor="type">
+          Comic Type:
+          <input
+            onChange={(event) =>
+              setComic({ ...comic, type: event.target.value })
+            }
+            value={comic.type}
+            id="type"
+            type="text"
+            placeholder="Text"
+          />
+        </label>
+        <label htmlFor="character">
+          Main Character Name:
+          <input
+            onChange={(event) =>
+              setComic({ ...comic, character: event.target.value })
+            }
+            value={comic.character}
+            id="character"
+            type="text"
+            placeholder="Text"
+          />
+        </label>
+        <label htmlFor="description">
+          Description:
+          <textarea
+            onChange={(event) =>
+              setComic({ ...comic, description: event.target.value })
+            }
+            value={comic.description}
+            id="description"
+            cols="30"
+            rows="7"
+            placeholder="Text"
+          ></textarea>
+        </label>
+        <ButtonText type="submit" text={"CREATE"} />
+      </form>
     </StyledForm>
   );
 };

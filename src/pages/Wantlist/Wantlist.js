@@ -1,5 +1,5 @@
-import HomeStyles from "./Home.styled";
-import Form from "../components/Form/Form";
+import HomeStyles from "../Home.styled";
+import Form from "../../components/Form/Form";
 
 const Wantlist = () => {
   return (

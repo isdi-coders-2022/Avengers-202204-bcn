@@ -1,6 +1,6 @@
 import Comic from "../components/Comic/Comic";
 import HomeStyles from "./Home.styled";
-import ButtonText from "../components/ButtonText/ButtonText";
+
 function Home() {
   return (
     <HomeStyles>

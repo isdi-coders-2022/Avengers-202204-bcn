@@ -6,7 +6,7 @@ import Layout from "./components/Layout/Layout";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/About";
 import Home from "./pages/Home";
-import Wantlist from "./pages/Wantlist";
+import Wantlist from "./pages/Wantlist/Wantlist";
 
 function App() {
   return (
