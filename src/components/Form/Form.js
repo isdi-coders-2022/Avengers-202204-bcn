@@ -1,5 +1,3 @@
-import StyleForm from "./StyleForm";
-
 const Form = () => {
   return (
     <div>
