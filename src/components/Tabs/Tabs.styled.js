@@ -4,20 +4,12 @@ const StyledTabs = styled.div`
   width: 100%;
   height: auto;
   min-height: 400px;
-  margin: 3.5rem auto 1.5rem;
-  padding: 0 2.5rem;
+  margin: 2.5rem 3rem;
+
   color: #fff;
   border-radius: 2rem;
 
   ul.nav {
-    /* width: 60%; */
-    /* margin: 0 auto 12rem; */
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid #39a2db;
-    border-radius: 2rem;
-    padding-left: 0px; */
   }
 
   ul.nav li {
@@ -43,6 +35,10 @@ const StyledTabs = styled.div`
   }
   ul.nav li.active {
     color: #39a2db;
+  }
+
+  .outlet {
+    margin-top: 1rem;
   }
 `;
 
