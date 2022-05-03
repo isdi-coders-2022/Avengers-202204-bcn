@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyleSearch = styled.div`
+const StyleSearch = styled.form`
   position: absolute;
   top: 0;
   left: 0;
