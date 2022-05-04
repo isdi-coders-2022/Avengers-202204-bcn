@@ -13,12 +13,17 @@ const StyledHeaderHero = styled.div`
   }
 
   .comic-cover {
+    opacity: 1;
     position: absolute;
     width: 12rem;
     height: 301px;
     top: 8rem;
     left: 3rem;
     z-index: 9999;
+  }
+
+  .comic-cover.on {
+    opacity: 0;
   }
 `;
 
