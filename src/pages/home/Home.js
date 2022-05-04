@@ -9,7 +9,12 @@ function Home() {
     <HomeStyles>
       <HeaderHero />
       <Info />
-      <Comic imageUrl="/assets/Alien.jpeg" title="Alien" info="Alien" />
+      <Comic
+        imageUrl="/assets/Alien.jpeg"
+        title="Alien"
+        info="Alien"
+        selected={true}
+      />
       <ButtonLoad />
     </HomeStyles>
   );
