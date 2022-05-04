@@ -4,7 +4,7 @@ import FormText from "./Form";
 
 describe("Given a Form component", () => {
   describe("When it is invoked", () => {
-    test("Then it should renderize 1 button elements", () => {
+    test("Then it should renderize 1 button element", () => {
       const expectedNumberOfElements = 1;
       render(<FormText />);
       const inputElement = screen.getAllByRole("button");
