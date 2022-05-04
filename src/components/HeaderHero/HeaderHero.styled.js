@@ -6,6 +6,21 @@ const StyledHeaderHero = styled.div`
   height: 15rem;
   z-index: 10 !important;
 
+  .logos {
+    position: absolute;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .marvel-logo {
+    width: 5rem;
+    height: 2rem;
+    object-fit: cover;
+  }
+
   .thumbnail {
     object-fit: cover;
     width: 100%;
