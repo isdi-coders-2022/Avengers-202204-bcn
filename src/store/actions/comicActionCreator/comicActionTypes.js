@@ -1,2 +1,2 @@
-export const addComicActionType = "add-comic";
+export const selectComicActionType = "select-comic";
 export const deleteComicActionType = "delete-comic";
