@@ -1,5 +1,6 @@
 const actionTypes = {
-  setFetching: "set-fetching",
+  setLoading: "set-loading",
+  fetchCommics: "fetch-comics",
 };
 
 export default actionTypes;
