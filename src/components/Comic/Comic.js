@@ -1,7 +1,10 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import ComicStyles from "./Comic.styled";
 import { NavLink } from "react-router-dom";
+import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
-const Comic = ({ title, imageUrl, info, action }) => {
+const Comic = ({ title, imageUrl, info, action, selected }) => {
   return (
     <ComicStyles className="col-7" onClick={action}>
       <NavLink to="/about">
@@ -16,6 +19,11 @@ const Comic = ({ title, imageUrl, info, action }) => {
             </div>
             <p className="comic__info">{info}</p>
           </div>
+          <FontAwesomeIcon
+            className={`icon ${selected ? "on" : ""} fa-2xl`}
+            icon={faBookmark}
+            onClick={action}
+          ></FontAwesomeIcon>
         </div>
       </NavLink>
     </ComicStyles>
