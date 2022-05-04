@@ -15,12 +15,25 @@ const HeaderHero = (title) => {
 
   return (
     <StyledHeaderHero data-testid="headerHero">
+      {!imageActive && (
+        <div className="logos">
+          <img
+            className="marvel-logo"
+            src="/assets/Marvel_Logo.png"
+            alt="marvel logo"
+          />
+          <img
+            className="becomics-logo"
+            src="/assets/Becomics-logo.png"
+            alt="marvel logo"
+          />
+        </div>
+      )}
       <img
         className="thumbnail"
         src="/assets/avengers-banner.jpeg"
         alt="title"
       />
-
       <img
         className={`comic-cover${imageActive ? "" : " on"}`}
         src="/assets/Alien.jpeg"
