@@ -20,6 +20,16 @@ const ComicStyles = styled.div`
       justify-content: space-between;
       padding: 2vw;
     }
+
+    .icon {
+      position: absolute;
+      left: 80%;
+      top: 4%;
+      color: #fff;
+    }
+    .on {
+      color: #183154;
+    }
   }
 
   .comic:before {
@@ -30,7 +40,7 @@ const ComicStyles = styled.div`
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 0.3;
+    opacity: 0.2;
   }
 `;
 
