@@ -1,3 +1,4 @@
+import ButtonLoad from "../../components/ButtonText/ButtonLoad";
 import Comic from "../../components/Comic/Comic";
 import HeaderHero from "../../components/HeaderHero/HeaderHero";
 import Info from "../../components/Info/Info";
@@ -9,6 +10,7 @@ function Home() {
       <HeaderHero />
       <Info />
       <Comic imageUrl="/assets/Alien.jpeg" title="Alien" info="Alien" />
+      <ButtonLoad />
     </HomeStyles>
   );
 }

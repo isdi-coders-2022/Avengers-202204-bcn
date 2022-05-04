@@ -1,8 +1,6 @@
-const ButtonLoad = () => {
-  return (
-    <div>
-      <button className="load-more">Load More</button>
-    </div>
-  );
+import StyledButtonLoad from "./ButtonLoad.styled";
+
+const ButtonLoad = ({ action }) => {
+  return <StyledButtonLoad onClick={action}>Load More</StyledButtonLoad>;
 };
 export default ButtonLoad;
