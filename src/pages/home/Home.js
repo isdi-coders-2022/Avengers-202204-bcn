@@ -10,7 +10,7 @@ function Home() {
       <HeaderHero />
       <Info />
       <Comic imageUrl="/assets/Alien.jpeg" title="Alien" info="Alien" />
-      <ButtonLoad />
+      <ButtonLoad action={() => {}} />
     </HomeStyles>
   );
 }
