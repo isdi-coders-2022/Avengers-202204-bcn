@@ -4,7 +4,9 @@ import HeaderHero from "../../components/HeaderHero/HeaderHero";
 import Info from "../../components/Info/Info";
 import HomeStyles from "./Home.styled";
 
-function Home() {
+function Home({ data }) {
+  // console.log(data);
+
   return (
     <HomeStyles>
       <HeaderHero />
