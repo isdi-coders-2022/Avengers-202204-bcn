@@ -3,7 +3,7 @@ import ButtonText from "../ButtonText/ButtonText";
 import StyledForm from "./Form.styled";
 
 const FormText = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const [comic, setComic] = useState({
     title: "",
     type: "",

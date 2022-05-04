@@ -4,10 +4,10 @@ import FormText from "./Form";
 
 describe("Given a Form component", () => {
   describe("When it is invoked", () => {
-    test("Then it should renderize 1 button element", () => {
-      const expectedNumberOfElements = 1;
+    test("Then it should renderize 4 input elements", () => {
+      const expectedNumberOfElements = 4;
       render(<FormText />);
-      const inputElement = screen.getAllByRole("button");
+      const inputElement = screen.getAllByRole("textbox");
       expect(inputElement.length).toEqual(expectedNumberOfElements);
     });
   });
