@@ -1,4 +1,8 @@
-import { addComicActionType, deleteComicActionType } from "./comicActionTypes";
+import {
+  addComicActionType,
+  deleteComicActionType,
+  createComicActionType,
+} from "./comicActionTypes";
 
 export const addComicActionCreator = (comicId) => ({
   type: addComicActionType,
@@ -8,4 +12,9 @@ export const addComicActionCreator = (comicId) => ({
 export const deleteComicActionCreator = (comicId) => ({
   type: deleteComicActionType,
   comicId,
+});
+
+export const createComicActionCreator = (comic) => ({
+  type: createComicActionType,
+  comic,
 });
