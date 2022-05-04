@@ -1,5 +1,10 @@
 import actionTypes from "./actionTypes";
 
-export const setFetchingAction = () => ({
-  type: actionTypes.setFetching,
+export const setLoadingComicsAction = () => ({
+  type: actionTypes.setLoading,
+});
+
+export const setFetchComicsAction = (comics) => ({
+  type: actionTypes.fetchCommics,
+  payload: comics,
 });
