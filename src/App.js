@@ -15,16 +15,17 @@ import Search from "./components/Search/Search";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [items, setItems] = useState([]);
+  const [comicList, setComicList] = useState([]);
 
-  const REACT_APP_PUBLIC_KEY = "c8e50321cae9b91671a256f31c430678";
-  const REACT_APP_PRIVATE_KEY = "2cc0c1e660b8aed3c95d656dfb37656fc3cf08b3";
+  const timeStamp = nanoid(8);
 
-  const TS = nanoid(8);
+  const hash = md5(
+    timeStamp +
+      process.env.react_app_private_key +
+      process.env.react_app_public_key
+  );
 
-  const hash = md5(TS + REACT_APP_PRIVATE_KEY + REACT_APP_PUBLIC_KEY);
-
-  const QUERY = `ts=${TS}&apikey=${REACT_APP_PUBLIC_KEY}&hash=${hash}`;
+  const QUERY = `ts=${timeStamp}&apikey=${process.env.react_app_public_key}&hash=${hash}`;
 
   useEffect(() => {
     const fetching = async () => {
@@ -34,7 +35,16 @@ function App() {
 
       const results = await response.json();
 
-      setItems(results.data.results);
+      const thumbnail = results.data.results[11].thumbnail;
+
+      const thumbnailSplit = thumbnail.path.split("//");
+      thumbnailSplit[0] = "https://";
+
+      const imageUrl = `${thumbnailSplit.join("")}/portrait_uncanny.${
+        thumbnail.extension
+      }`;
+
+      setComicList(imageUrl);
     };
 
     fetching();
@@ -45,7 +55,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="/home" element={<Home data={items} />} />
+          <Route path="/home" element={<Home data={comicList} />} />
           <Route path="/about" element={<About />} />
           <Route path="/wantlist" element={<Wantlist />} />
         </Routes>
