@@ -15,6 +15,13 @@ const HeaderHero = (title) => {
 
   return (
     <StyledHeaderHero data-testid="headerHero">
+      <div className="logos">
+        <img
+          className="marvel-logo"
+          src="/assets/Marvel_Logo.png"
+          alt="marvel logo"
+        />
+      </div>
       <img
         className="thumbnail"
         src="/assets/avengers-banner.jpeg"
