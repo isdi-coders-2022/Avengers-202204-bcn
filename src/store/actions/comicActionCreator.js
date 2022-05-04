@@ -1,16 +1,16 @@
 import {
-  addComicActionType,
-  deleteComicActionType,
+  selectedComicActionType,
+  removeComicActionType,
   createComicActionType,
 } from "./comicActionTypes";
 
-export const addComicActionCreator = (comicId) => ({
-  type: addComicActionType,
+export const selectedComicActionCreator = (comicId) => ({
+  type: selectedComicActionType,
   comicId,
 });
 
-export const deleteComicActionCreator = (comicId) => ({
-  type: deleteComicActionType,
+export const removeComicActionCreator = (comicId) => ({
+  type: removeComicActionType,
   comicId,
 });
 
