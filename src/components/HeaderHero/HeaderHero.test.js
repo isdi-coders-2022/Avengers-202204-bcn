@@ -4,7 +4,7 @@ import HeaderHero from "./HeaderHero";
 
 describe("Given a HeaderHero component", () => {
   describe("When invoked", () => {
-    test("Then it should render a div element", () => {
+    test("Then it should render 4 images elements", () => {
       render(
         <BrowserRouter>
           <Routes>
@@ -13,9 +13,9 @@ describe("Given a HeaderHero component", () => {
         </BrowserRouter>
       );
 
-      const headerHero = screen.getByTestId("headerHero");
+      const imageElements = screen.getAllByRole("img");
 
-      expect(headerHero).toBeInTheDocument();
+      expect(imageElements.length).toEqual(4);
     });
   });
 });
