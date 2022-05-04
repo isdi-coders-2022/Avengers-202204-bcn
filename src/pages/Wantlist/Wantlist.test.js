@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Wantlist from "./Wantlist";
 
