@@ -8,12 +8,15 @@ const comicsReducer = (currentComics, action) => {
       newComics = [...action.comics];
       break;
 
+    case comicActionTypes.loadMyAPIComics:
+      newComics = [...action.myLocalComics];
+      break;
+
     case comicActionTypes.fetchCommicDetails:
       newComics = { ...action.comic };
       break;
 
     case comicActionTypes.selectedComic:
-
       newComics = [...currentComics, action.comic];
       break;
 

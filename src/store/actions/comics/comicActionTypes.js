@@ -1,5 +1,6 @@
 const comicActionTypes = {
   loadComics: "load-comic",
+  loadMyAPIComics: "load-my-api-comic",
   fetchCommicDetails: "fetch-details",
   removeComic: "remove-comic",
   selectedComic: "select-comic",

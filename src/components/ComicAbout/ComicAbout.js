@@ -1,7 +1,7 @@
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useAPI from "../../hooks/useAPI";
-import ComicContext from "../../store/contexts/ComicContext";
+//import ComicContext from "../../store/contexts/ComicContext";
 import Tabs from "../Tabs/Tabs";
 import StyledComicAbout, {
   StyledAboutContainer,

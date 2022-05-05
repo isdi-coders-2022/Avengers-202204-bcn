@@ -1,7 +1,7 @@
-import TabAboutStyles from "./TabAboutStyles";
+import TabAboutStyled from "./TabAboutStyled";
 const TabAbout = () => {
   return (
-    <TabAboutStyles className="TabAbout">
+    <TabAboutStyled className="TabAbout">
       <p className="TabAbout__content">
         From DC Comics comes the Suicide Squad, an antihero team of incarcerated
         supervillains who act as deniable assets for the United States
@@ -37,7 +37,7 @@ const TabAbout = () => {
           </li>
         </div>
       </ul>
-    </TabAboutStyles>
+    </TabAboutStyled>
   );
 };
 export default TabAbout;
