@@ -1,13 +1,12 @@
-import actionTypes from "../api/actionTypes";
 import actionsTypes from "./comicActionTypes";
 
 export const loadComicsAction = (comics) => ({
-  type: actionTypes.loadComics,
+  type: actionsTypes.loadComics,
   comics,
 });
 
 export const fetchComicDetailAction = (comic) => ({
-  type: actionTypes.fetchCommicDetails,
+  type: actionsTypes.fetchCommicDetails,
   comic,
 });
 
