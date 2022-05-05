@@ -1,11 +1,14 @@
-import FormText from "../../components/Form/Form";
+import ComicList from "../../components/ComicList/ComicList";
+import HeaderHero from "../../components/HeaderHero/HeaderHero";
+import Info from "../../components/Info/Info";
 import HomeStyles from "../home/Home.styled";
 
 const Wantlist = () => {
   return (
     <HomeStyles>
-      Wantlist
-      <FormText />
+      <HeaderHero />
+      <Info />
+      <ComicList />
     </HomeStyles>
   );
 };
