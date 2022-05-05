@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledHeaderHero = styled.div`
+const HeaderHeroStyles = styled.div`
   overflow: hidden;
   width: 100%;
   height: 10rem;
@@ -51,4 +51,4 @@ const StyledHeaderHero = styled.div`
   }
 `;
 
-export default StyledHeaderHero;
+export default HeaderHeroStyles;

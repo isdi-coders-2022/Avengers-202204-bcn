@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import StyledHeaderHero from "./HeaderHero.styled";
+import HeaderHeroStyles from "./HeaderHeroStyles";
 
 const HeaderHero = (_title) => {
   const [imageActive, setImageActive] = useState(false);
@@ -14,7 +14,7 @@ const HeaderHero = (_title) => {
   }, [pathname]);
 
   return (
-    <StyledHeaderHero data-testid="headerHero">
+    <HeaderHeroStyles data-testid="headerHero">
       {!imageActive && (
         <div className="logos">
           <img
@@ -39,7 +39,7 @@ const HeaderHero = (_title) => {
         src="/assets/Alien.jpeg"
         alt="title"
       />
-    </StyledHeaderHero>
+    </HeaderHeroStyles>
   );
 };
 
