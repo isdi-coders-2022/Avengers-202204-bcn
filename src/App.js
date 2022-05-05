@@ -6,7 +6,6 @@ import Layout from "./components/Layout/Layout";
 import About from "./pages/about/About";
 import Navbar from "./components/Navbar/Navbar";
 
-import SelectedComicList from "./pages/SelectedComictlist/SelectedComiclist";
 import Home from "./pages/home/Home";
 import Search from "./components/Search/Search";
 import useAPI from "./hooks/useAPI";
