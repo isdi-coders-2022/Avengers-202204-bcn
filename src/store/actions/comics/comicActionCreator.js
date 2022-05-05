@@ -15,7 +15,7 @@ export const removeComicAction = (id) => ({
   id,
 });
 
-export const selectedComicAction = (id) => ({
+export const selectedComicAction = (comic) => ({
   type: actionTypes.selectedComic,
-  id,
+  comic,
 });

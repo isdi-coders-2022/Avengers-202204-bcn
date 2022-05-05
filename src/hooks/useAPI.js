@@ -24,7 +24,7 @@ const useAPI = () => {
     } catch (error) {
       return error.message;
     }
-  }, [dispatch, query]);
+  }, [dispatch, query, dispatchAPI]);
 
   return { loadComicsAPI };
 };
