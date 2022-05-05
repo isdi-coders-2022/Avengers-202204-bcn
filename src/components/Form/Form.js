@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ButtonText from "../ButtonText/ButtonText";
-import StyledForm from "./Form.styled";
+import FormStyles from "./FormStyles";
 
 const FormText = () => {
   const [show, setShow] = useState(true);
@@ -11,7 +11,7 @@ const FormText = () => {
     description: "",
   });
   return (
-    <StyledForm>
+    <FormStyles>
       {show ? (
         <div>
           <form action="url">
@@ -69,7 +69,7 @@ const FormText = () => {
         </div>
       ) : null}
       <button onClick={() => setShow(true)}>show</button>
-    </StyledForm>
+    </FormStyles>
   );
 };
 export default FormText;

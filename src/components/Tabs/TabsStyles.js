@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledTabs = styled.div`
+const TabsStyles = styled.div`
   width: 100%;
   height: 10;
   min-height: 400px;
@@ -40,4 +40,4 @@ const StyledTabs = styled.div`
   }
 `;
 
-export default StyledTabs;
+export default TabsStyles;

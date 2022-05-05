@@ -1,4 +1,4 @@
-const actionsTypes = {
+const comicActionTypes = {
   loadComics: "load-comic",
   fetchCommicDetails: "fetch-details",
   removeComic: "remove-comic",
@@ -6,4 +6,4 @@ const actionsTypes = {
   addComic: "add-comic",
 };
 
-export default actionsTypes;
+export default comicActionTypes;

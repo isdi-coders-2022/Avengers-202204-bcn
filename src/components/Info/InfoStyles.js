@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const InfoStyle = styled.div`
+const InfoStyles = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -9,4 +9,4 @@ const InfoStyle = styled.div`
   padding: 2rem 4rem;
 `;
 
-export default InfoStyle;
+export default InfoStyles;
