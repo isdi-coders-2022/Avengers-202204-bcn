@@ -1,6 +1,6 @@
-import StyleButtonText from "./ButtonText.styled";
+import ButtonTextStyles from "./ButtonTextStyles";
 
 function ButtonText({ text }) {
-  return <StyleButtonText>{text}</StyleButtonText>;
+  return <ButtonTextStyles>{text}</ButtonTextStyles>;
 }
 export default ButtonText;

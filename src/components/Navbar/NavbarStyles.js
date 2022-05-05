@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const NavbarStyle = styled.div`
+const NavbarStyles = styled.div`
   .list {
     position: fixed;
     bottom: 0;
@@ -21,4 +21,4 @@ const NavbarStyle = styled.div`
   }
 `;
 
-export default NavbarStyle;
+export default NavbarStyles;

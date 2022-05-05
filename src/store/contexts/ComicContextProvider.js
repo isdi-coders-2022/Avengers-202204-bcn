@@ -4,6 +4,7 @@ import ComicContext from "./ComicContext";
 
 const ComicContextProvider = ({ children }) => {
   const [comics, dispatch] = useReducer(comicsReducer, []);
+  const [comic, dispatchComic] = useReducer(comicsReducer, {});
   const [myComics, myComicsDispatch] = useReducer(comicsReducer, []);
   const [myAPIComics, myAPIComicsDispatch] = useReducer(comicsReducer, []);
   return (

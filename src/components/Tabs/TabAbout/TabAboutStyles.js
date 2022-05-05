@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledTabAbout = styled.div`
+const TabAboutStyles = styled.div`
   .TabAbout {
     &__content {
       font-size: 1.1rem;
@@ -51,4 +51,4 @@ const StyledTabAbout = styled.div`
   }
 `;
 
-export default StyledTabAbout;
+export default TabAboutStyles;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledForm = styled.div`
+const FormStyles = styled.div`
   background-color: #efefef;
   form {
     font-family: "Roboto", sans-serif;
@@ -31,4 +31,4 @@ const StyledForm = styled.div`
   }
 `;
 
-export default StyledForm;
+export default FormStyles;

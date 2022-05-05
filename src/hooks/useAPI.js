@@ -1,5 +1,4 @@
 import { useCallback, useContext } from "react";
-// import { setLoadingComicsAction } from "../store/actions/api/actionCreators";
 import {
   fetchComicDetailAction,
   loadComicsAction,
@@ -11,13 +10,12 @@ import getQuery from "../utils/getQuery";
 
 const useAPI = () => {
   const query = getQuery();
+
   const { dispatch, myAPIComicsDispatch } = useContext(ComicContext);
-  // const { dispatch: dispatchAPI } = useContext(APIContext);
+
 
   const loadComicsAPI = useCallback(async () => {
     try {
-      // dispatchAPI(setLoadingComicsAction());
-
       const response = await fetch(
         `https://gateway.marvel.com/v1/public/comics?${query}`
       );
@@ -33,8 +31,6 @@ const useAPI = () => {
   const fetchComicDetailAPI = useCallback(
     async (id) => {
       try {
-        //  dispatchAPI(setLoadingComicsAction());
-
         const response = await fetch(
           `https://gateway.marvel.com/v1/public/comics/${id}?${query}`
         );
