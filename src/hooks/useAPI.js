@@ -8,12 +8,11 @@ import getQuery from "../utils/getQuery";
 const useAPI = () => {
   const query = getQuery();
   const { dispatch } = useContext(ComicContext);
-  // const { dispatch } = useContext(APIContext);
-  // const { dispatch: dispatchAPI } = useContext(APIContext);
+  const { dispatch: dispatchAPI } = useContext(APIContext);
 
   const loadComicsAPI = useCallback(async () => {
     try {
-      dispatch(setLoadingComicsAction());
+      dispatchAPI(setLoadingComicsAction());
 
       const response = await fetch(
         `http://gateway.marvel.com/v1/public/comics?${query}`
