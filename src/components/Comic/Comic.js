@@ -12,7 +12,7 @@ const Comic = ({ action, selected, comic }) => {
 
   return (
     <ComicStyles className="col-7" onClick={action}>
-      <NavLink to="/about">
+      <NavLink to={`/about/${comic.id}`}>
         <div className="comic d-flex flex-column">
           <div className="comic__image-container">
             <img

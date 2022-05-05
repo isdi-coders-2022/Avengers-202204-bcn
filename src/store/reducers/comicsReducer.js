@@ -1,11 +1,15 @@
-import actionTypes from "../actions/api/actionTypes";
+import actionsTypes from "../actions/comics/comicActionTypes";
 
 const comicsReducer = (currentComics, action) => {
   let newComics;
 
   switch (action.type) {
-    case actionTypes.loadComics:
+    case actionsTypes.loadComics:
       newComics = [...action.comics];
+      break;
+
+    case actionsTypes.fetchCommicDetails:
+      newComics = { ...action.comic };
       break;
 
     default:
