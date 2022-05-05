@@ -1,9 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Comic from "./Comic";
-import { MemoryRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import APIContextProvider from "../../store/contexts/APIContextProvider";
+import ComicContextProvider from "../../store/contexts/ComicContextProvider";
 
-describe("Given a Card component function", () => {
+describe("Given a Comic component function", () => {
   describe("When invoked with a title property text'Spiderman'", () => {
     test("Then it should render an h3 element with the test 'Spiderman' inside", () => {
       const comic = {
@@ -13,7 +15,15 @@ describe("Given a Card component function", () => {
         },
       };
 
-      render(<Comic comic={comic} />, { wrapper: MemoryRouter });
+      render(
+        <BrowserRouter>
+          <APIContextProvider>
+            <ComicContextProvider>
+              <Comic comic={comic} />
+            </ComicContextProvider>
+          </APIContextProvider>
+        </BrowserRouter>
+      );
 
       const expectedImage = screen.getByRole("img");
 

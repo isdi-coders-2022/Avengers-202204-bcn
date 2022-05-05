@@ -1,11 +1,12 @@
 import actionTypes from "../api/actionTypes";
 import { removeComicAction, selectedComicAction } from "./comicActionCreator";
+import actionsTypes from "./comicActionTypes";
 
 describe("Given a selectedComicAction", () => {
   describe("When it receives an id:2", () => {
     test("Then it should return an action with type 'selected-comic' and comicId=2", () => {
       const comic = 2;
-      const expectedAction = { type: actionTypes.selectedComic, comic: 2 };
+      const expectedAction = { type: actionsTypes.selectedComic, comic: 2 };
 
       const action = selectedComicAction(comic);
 
@@ -20,7 +21,7 @@ describe("Given a removeComicAction function", () => {
       const id = 1;
 
       const expectedAction = {
-        type: actionTypes.removeComic,
+        type: actionsTypes.removeComic,
         id: 1,
       };
 
