@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledTabReview = styled.div`
+const TabReviewStyles = styled.div`
   width: 60%;
 
   .TabReview p {
@@ -9,4 +9,4 @@ const StyledTabReview = styled.div`
   }
 `;
 
-export default StyledTabReview;
+export default TabReviewStyles;

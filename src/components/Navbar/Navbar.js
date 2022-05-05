@@ -6,11 +6,11 @@ import {
   faBookmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
-import NavbarStyle from "./Navbar.styled";
+import NavbarStyles from "./NavbarStyles";
 
 const Navbar = () => {
   return (
-    <NavbarStyle>
+    <NavbarStyles>
       <nav className="navbar">
         <ul className="list list-unstyled">
           <li>
@@ -43,7 +43,7 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-    </NavbarStyle>
+    </NavbarStyles>
   );
 };
 
