@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Wantlist from "./Wantlist";
+import Wantlist from "./SelectedComiclist";
 import ComicContextProvider from "../../store/contexts/ComicContextProvider";
 import APIContextProvider from "../../store/contexts/APIContextProvider";
 
