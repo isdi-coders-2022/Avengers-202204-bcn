@@ -4,10 +4,10 @@ import { removeComicAction, selectedComicAction } from "./comicActionCreator";
 describe("Given a selectedComicAction", () => {
   describe("When it receives an id:2", () => {
     test("Then it should return an action with type 'selected-comic' and comicId=2", () => {
-      const id = 2;
-      const expectedAction = { type: actionTypes.selectedComic, id: 2 };
+      const comic = 2;
+      const expectedAction = { type: actionTypes.selectedComic, comic: 2 };
 
-      const action = selectedComicAction(id);
+      const action = selectedComicAction(comic);
 
       expect(action).toEqual(expectedAction);
     });
