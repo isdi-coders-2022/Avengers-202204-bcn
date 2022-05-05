@@ -31,7 +31,7 @@ const HeaderHero = (_title) => {
       )}
       <img
         className="thumbnail"
-        src="/assets/avengers-banner.jpeg"
+        src="/assets/avengers-banner-light.jpeg"
         alt="title"
       />
       <img
