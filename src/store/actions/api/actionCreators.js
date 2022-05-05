@@ -4,7 +4,7 @@ export const setLoadingComicsAction = () => ({
   type: actionTypes.setLoading,
 });
 
-export const setFetchComicsAction = (comics) => ({
-  type: actionTypes.fetchCommics,
-  comics,
-});
+// export const setFetchComicsAction = (comics) => ({
+//   type: actionTypes.fetchCommics,
+//   comics,
+// });
