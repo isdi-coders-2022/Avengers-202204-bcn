@@ -1,16 +1,14 @@
-
 import { useContext } from "react";
 import ComicContext from "../../../store/contexts/ComicContext";
-import TabAboutStyles from "./TabAboutStyles";
+import TabAboutStyled from "./TabAboutStyled";
 
 const TabAbout = () => {
   const { comic } = useContext(ComicContext);
 
   return (
-
     <>
       {comic && (
-        <TabAboutStyles className="TabAbout">
+        <TabAboutStyled className="TabAbout">
           <p className="TabAbout__content">
             {comic.description
               ? comic.description
@@ -54,11 +52,9 @@ const TabAbout = () => {
               </li>
             </div>
           </ul>
-        </TabAboutStyles>
+        </TabAboutStyled>
       )}
     </>
-
-
   );
 };
 export default TabAbout;
