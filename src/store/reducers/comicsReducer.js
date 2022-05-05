@@ -13,7 +13,6 @@ const comicsReducer = (currentComics, action) => {
       break;
 
     case comicActionTypes.selectedComic:
-
       newComics = [...currentComics, action.comic];
       break;
 

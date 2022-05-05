@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import HeaderHeroStyles from "./HeaderHeroStyles";
 
-const HeaderHero = (_title) => {
+const HeaderHero = () => {
   const [imageActive, setImageActive] = useState(false);
 
   const location = useLocation();
 
+  let { id } = useParams();
   const { pathname } = location;
 
   useEffect(() => {
-    return pathname === "/about" ? setImageActive(true) : setImageActive(false);
-  }, [pathname]);
+    return pathname === `/about/${id}`
+      ? setImageActive(true)
+      : setImageActive(false);
+  }, [pathname, id]);
 
   return (
     <HeaderHeroStyles data-testid="headerHero">

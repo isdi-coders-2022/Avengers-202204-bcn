@@ -12,13 +12,14 @@ import StyledComicAbout, {
 
 const ComicAbout = () => {
   let { id } = useParams();
-  // const { comic } = useContext(ComicContext);
 
   const { fetchComicDetailAPI } = useAPI();
 
   useEffect(() => {
     fetchComicDetailAPI(id);
   }, [fetchComicDetailAPI, id]);
+
+  const { comic } = useContext(ComicContext);
 
   return (
     <>
