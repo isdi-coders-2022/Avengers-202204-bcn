@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import ButtonLoad from "../../components/ButtonText/ButtonLoad";
-import Comic from "../../components/Comic/Comic";
+import ComicList from "../../components/ComicList/ComicList";
 import HeaderHero from "../../components/HeaderHero/HeaderHero";
 import Info from "../../components/Info/Info";
 import APIContext from "../../store/contexts/APIContext";
@@ -15,6 +15,7 @@ function Home() {
     <HomeStyles>
       <HeaderHero />
       <Info />
+      <ComicList />
       <ButtonLoad />
     </HomeStyles>
   );
