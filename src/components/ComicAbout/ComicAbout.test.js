@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import APIContextProvider from "../../store/contexts/APIContextProvider";
 import ComicContextProvider from "../../store/contexts/ComicContextProvider";
 import ComicAbout from "./ComicAbout";
 
@@ -9,11 +8,9 @@ describe("Given a ComicAbout Component", () => {
     test("Then it should render an img", () => {
       render(
         <BrowserRouter>
-          <APIContextProvider>
-            <ComicContextProvider>
-              <ComicAbout />
-            </ComicContextProvider>
-          </APIContextProvider>
+          <ComicContextProvider>
+            <ComicAbout />
+          </ComicContextProvider>
         </BrowserRouter>
       );
       const img = screen.getByRole("img");

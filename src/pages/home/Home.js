@@ -4,7 +4,7 @@ import ComicList from "../../components/ComicList/ComicList";
 import HeaderHero from "../../components/HeaderHero/HeaderHero";
 import Info from "../../components/Info/Info";
 
-import HomeStyles from "./Home.styled";
+import HomeStyles from "./HomeStyles";
 
 function Home() {
   return (

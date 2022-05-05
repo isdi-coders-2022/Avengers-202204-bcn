@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyleSearch = styled.form`
+const SearchStyles = styled.form`
   position: absolute;
   top: 0;
   left: 0;
@@ -21,4 +21,4 @@ const StyleSearch = styled.form`
   }
 `;
 
-export default StyleSearch;
+export default SearchStyles;

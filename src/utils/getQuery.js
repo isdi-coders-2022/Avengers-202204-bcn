@@ -9,8 +9,7 @@ const getQuery = () => {
       process.env.react_app_public_key
   );
 
-  const query = `ts=${timeStamp}&apikey=${process.env.react_app_public_key}&hash=${hash}`;
-  return query;
+  return `ts=${timeStamp}&apikey=${process.env.react_app_public_key}&hash=${hash}`;
 };
 
 export default getQuery;
