@@ -1,7 +1,7 @@
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useAPI from "../../hooks/useAPI";
-import ComicContext from "../../store/contexts/ComicContext";
+
 import Tabs from "../Tabs/Tabs";
 import StyledComicAbout, {
   StyledAboutContainer,
@@ -18,8 +18,6 @@ const ComicAbout = () => {
   useEffect(() => {
     fetchComicDetailAPI(id);
   }, [fetchComicDetailAPI, id]);
-
-  const { comic } = useContext(ComicContext);
 
   return (
     <>
