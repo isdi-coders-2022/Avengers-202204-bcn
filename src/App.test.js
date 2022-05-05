@@ -4,17 +4,20 @@ import "@testing-library/jest-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import App from "./App";
+import APIContextProvider from "./store/contexts/APIContextProvider";
 
 describe("Given a component Home", () => {
-  describe("When invoked with the text 'TITLE'", () => {
-    test("Then it should render a span element with the text 'TITLE", () => {
-      const text = "TITLE";
+  describe("When invoked with the text 'Comics List'", () => {
+    test("Then it should render a span element with the text 'Comics List", () => {
+      const text = "Comics List";
 
       render(
         <BrowserRouter>
-          <Routes>
-            <Route path="*" element={<App />}></Route>
-          </Routes>
+          <APIContextProvider>
+            <Routes>
+              <Route path="*" element={<App />}></Route>
+            </Routes>
+          </APIContextProvider>
         </BrowserRouter>
       );
 

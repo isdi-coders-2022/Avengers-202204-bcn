@@ -10,7 +10,7 @@ export const addComicAction = (comic) => ({
   comic,
 });
 
-export const deleteComicAction = (id) => ({
+export const removeComicAction = (id) => ({
   type: actionTypes.removeComic,
   id,
 });
