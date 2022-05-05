@@ -1,17 +1,17 @@
 import { useContext } from "react";
 import ComicContext from "../../store/contexts/ComicContext";
 import Comic from "../Comic/Comic";
-import ComicListStyles from "./ComicListStyles";
+import ComicListStyled from "./ComicListStyled";
 
 const ComicList = () => {
   const { comics } = useContext(ComicContext);
 
   return (
-    <ComicListStyles className="comic-list">
+    <ComicListStyled className="comic-list">
       {comics.map((comic) => {
-        return <Comic key={comic.id} comic={comic} selected={true} />;
+        return <Comic key={comic.id} comic={comic} selected={false} />;
       })}
-    </ComicListStyles>
+    </ComicListStyled>
   );
 };
 export default ComicList;

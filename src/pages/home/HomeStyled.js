@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HomeStyles = styled.div`
+const HomeStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,4 +12,4 @@ const HomeStyles = styled.div`
   }
 `;
 
-export default HomeStyles;
+export default HomeStyled;

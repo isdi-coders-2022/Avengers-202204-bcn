@@ -1,10 +1,13 @@
+
 import { useContext } from "react";
 import ComicContext from "../../../store/contexts/ComicContext";
 import TabAboutStyles from "./TabAboutStyles";
+
 const TabAbout = () => {
   const { comic } = useContext(ComicContext);
 
   return (
+
     <>
       {comic && (
         <TabAboutStyles className="TabAbout">
@@ -54,6 +57,8 @@ const TabAbout = () => {
         </TabAboutStyles>
       )}
     </>
+
+
   );
 };
 export default TabAbout;
