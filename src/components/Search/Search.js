@@ -1,10 +1,10 @@
-import StyleSearch from "./Search.styled";
+import SearchStyles from "./SearchStyles";
 
 const Search = ({ active }) => {
   return (
-    <StyleSearch className={`search ${active ? "" : "off"}`}>
+    <SearchStyles className={`search ${active ? "" : "off"}`}>
       <input type="text" placeholder="Search" />
-    </StyleSearch>
+    </SearchStyles>
   );
 };
 

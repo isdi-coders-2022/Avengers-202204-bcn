@@ -2,7 +2,7 @@ import { useState } from "react";
 import TabAbout from "./TabAbout/TabAbout";
 import TabReview from "./TabReview/TabReview";
 
-import StyledTabs from "./Tabs.styled";
+import TabsStyles from "./TabsStyles";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("aboutComic");
@@ -12,7 +12,7 @@ const Tabs = () => {
   const handleReviews = () => setActiveTab("reviews");
 
   return (
-    <StyledTabs className="Tabs">
+    <TabsStyles className="Tabs">
       <ul className="nav">
         <li
           className={activeTab === "aboutComic" ? "active" : ""}
@@ -32,7 +32,7 @@ const Tabs = () => {
       <div className="outlet">
         {activeTab === "aboutComic" ? <TabAbout /> : <TabReview />}
       </div>
-    </StyledTabs>
+    </TabsStyles>
   );
 };
 export default Tabs;

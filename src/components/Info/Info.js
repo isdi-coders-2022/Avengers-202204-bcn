@@ -1,11 +1,11 @@
-import InfoStyle from "./Info.styled";
+import InfoStyles from "./InfoStyles";
 
 const Info = () => {
   return (
-    <InfoStyle className="info">
+    <InfoStyles className="info">
       <span className="info info__title">Comics List</span>
       <span className="info info__state">4 Comics</span>
-    </InfoStyle>
+    </InfoStyles>
   );
 };
 
