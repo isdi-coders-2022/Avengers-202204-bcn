@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Comic from "./Comic";
 import { BrowserRouter } from "react-router-dom";
-import APIContextProvider from "../../store/contexts/APIContextProvider";
+
 import ComicContextProvider from "../../store/contexts/ComicContextProvider";
 
 describe("Given a Comic component function", () => {
@@ -17,11 +17,9 @@ describe("Given a Comic component function", () => {
 
       render(
         <BrowserRouter>
-          <APIContextProvider>
-            <ComicContextProvider>
-              <Comic comic={comic} />
-            </ComicContextProvider>
-          </APIContextProvider>
+          <ComicContextProvider>
+            <Comic comic={comic} />
+          </ComicContextProvider>
         </BrowserRouter>
       );
 

@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useAPI from "../../hooks/useAPI";
+import ComicContext from "../../store/contexts/ComicContext";
 import Tabs from "../Tabs/Tabs";
 import StyledComicAbout, {
   StyledAboutContainer,
@@ -11,6 +12,7 @@ import StyledComicAbout, {
 
 const ComicAbout = () => {
   let { id } = useParams();
+  // const { comic } = useContext(ComicContext);
 
   const { fetchComicDetailAPI } = useAPI();
 

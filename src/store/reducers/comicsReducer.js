@@ -11,11 +11,11 @@ const comicsReducer = (currentComics, action) => {
     case actionsTypes.fetchCommicDetails:
       newComics = { ...action.comic };
       break;
-      
+
     case actionsTypes.selectedComic:
       newComics = [...currentComics, action.comic];
       break;
-      
+
     default:
       newComics = [...currentComics];
   }
