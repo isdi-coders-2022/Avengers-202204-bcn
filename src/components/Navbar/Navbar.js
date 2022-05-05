@@ -34,7 +34,7 @@ const Navbar = () => {
             ></FontAwesomeIcon>
           </li>
           <li>
-            <NavLink to="/wantlist">
+            <NavLink to="/selected">
               <FontAwesomeIcon
                 className="icon fa-2xl"
                 icon={faBookmark}

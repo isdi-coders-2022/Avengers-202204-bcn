@@ -11,6 +11,7 @@ import Home from "./pages/home/Home";
 import Search from "./components/Search/Search";
 import useAPI from "./hooks/useAPI";
 import { useEffect } from "react";
+import SelectedComiclist from "./pages/SelectedComictlist/SelectedComiclist";
 
 function App() {
   const { loadComicsAPI } = useAPI();
@@ -25,7 +26,7 @@ function App() {
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about/:id" element={<About />} />
-          <Route path="/wantlist" element={<Wantlist />} />
+          <Route path="/selected" element={<SelectedComiclist />} />
         </Routes>
       </Layout>
       <Search active={false} />

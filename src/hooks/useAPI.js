@@ -1,17 +1,17 @@
 import { useCallback, useContext } from "react";
-import { setLoadingComicsAction } from "../store/actions/api/actionCreators";
+// import { setLoadingComicsAction } from "../store/actions/api/actionCreators";
 import {
   fetchComicDetailAction,
   loadComicsAction,
 } from "../store/actions/comics/comicActionCreator";
-import APIContext from "../store/contexts/APIContext";
+
 import ComicContext from "../store/contexts/ComicContext";
 import getQuery from "../utils/getQuery";
 
 const useAPI = () => {
   const query = getQuery();
   const { dispatch } = useContext(ComicContext);
-  const { dispatch: dispatchAPI } = useContext(APIContext);
+  // const { dispatch: dispatchAPI } = useContext(APIContext);
 
   const loadComicsAPI = useCallback(async () => {
     try {

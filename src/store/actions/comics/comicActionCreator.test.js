@@ -1,4 +1,3 @@
-import actionTypes from "../api/actionTypes";
 import { removeComicAction, selectedComicAction } from "./comicActionCreator";
 import actionsTypes from "./comicActionTypes";
 
