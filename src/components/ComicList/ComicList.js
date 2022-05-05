@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import ComicContext from "../../store/contexts/ComicContext";
 import Comic from "../Comic/Comic";
 
 const ComicList = () => {
+  const { comics, dispatch } = useContext(ComicContext);
+
   return (
     <ul>
       <Comic

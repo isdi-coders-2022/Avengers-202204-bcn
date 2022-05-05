@@ -6,6 +6,7 @@ const comicsReducer = (currentComics, action) => {
   switch (action.type) {
     case actionTypes.loadComics:
       newComics = [...action.comics];
+
       break;
 
     default:

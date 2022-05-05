@@ -1,20 +1,18 @@
 import { useCallback, useContext } from "react";
-import {
-  setFetchComicsAction,
-  setLoadingComicsAction,
-} from "../store/actions/api/actionCreators";
+import { setLoadingComicsAction } from "../store/actions/api/actionCreators";
 import { loadComicsAction } from "../store/actions/comics/comicActionCreator";
 import APIContext from "../store/contexts/APIContext";
+import ComicContext from "../store/contexts/ComicContext";
 import getQuery from "../utils/getQuery";
 
 const useAPI = () => {
   const query = getQuery();
-
-  const { dispatch } = useContext(APIContext);
+  const { dispatch } = useContext(ComicContext);
+  const { dispatch: dispatchAPI } = useContext(APIContext);
 
   const loadComicsAPI = useCallback(async () => {
     try {
-      dispatch(setLoadingComicsAction());
+      dispatchAPI(setLoadingComicsAction());
 
       const response = await fetch(
         `http://gateway.marvel.com/v1/public/comics?${query}`
@@ -22,14 +20,11 @@ const useAPI = () => {
 
       const comics = await response.json();
 
-      // console.log(comics.data.results);
-      dispatch(loadComicsAction(comics));
-
-      dispatch(setFetchComicsAction(comics.data.results));
+      dispatch(loadComicsAction(comics.data.results));
     } catch (error) {
       return error.message;
     }
-  }, [dispatch]);
+  }, [dispatch, query]);
 
   return { loadComicsAPI };
 };

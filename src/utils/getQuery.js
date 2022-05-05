@@ -1,8 +1,7 @@
-import { nanoid } from "nanoid";
 import md5 from "md5";
 
 const getQuery = () => {
-  const timeStamp = nanoid(8);
+  const timeStamp = 8374732;
 
   const hash = md5(
     timeStamp +
