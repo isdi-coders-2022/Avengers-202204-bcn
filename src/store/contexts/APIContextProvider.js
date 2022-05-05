@@ -6,7 +6,7 @@ const APIContextProvider = ({ children }) => {
   const [apiStatus, dispatch] = useReducer(apiReducer, { loading: false });
 
   return (
-    <APIContext.Provider value={(apiStatus, dispatch)}>
+    <APIContext.Provider value={{ apiStatus, dispatch }}>
       {children}
     </APIContext.Provider>
   );

@@ -6,5 +6,5 @@ export const setLoadingComicsAction = () => ({
 
 export const setFetchComicsAction = (comics) => ({
   type: actionTypes.fetchCommics,
-  payload: comics,
+  comics,
 });
