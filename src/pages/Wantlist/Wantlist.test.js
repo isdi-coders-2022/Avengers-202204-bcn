@@ -2,17 +2,23 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Wantlist from "./Wantlist";
+import ComicContextProvider from "../../store/contexts/ComicContextProvider";
+import APIContextProvider from "../../store/contexts/APIContextProvider";
 
 describe("Given a component Home", () => {
   describe("When invoked with the text 'Comic Type:'", () => {
     test("Then it should render a span element with the text 'Comic Type:", () => {
-      const text = "Comic Type:";
+      const text = "Comics List";
 
       render(
         <BrowserRouter>
-          <Routes>
-            <Route path="*" element={<Wantlist />}></Route>
-          </Routes>
+          <APIContextProvider>
+            <ComicContextProvider>
+              <Routes>
+                <Route path="*" element={<Wantlist />}></Route>
+              </Routes>
+            </ComicContextProvider>
+          </APIContextProvider>
         </BrowserRouter>
       );
 

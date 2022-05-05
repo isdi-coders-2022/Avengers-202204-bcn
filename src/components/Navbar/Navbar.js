@@ -28,18 +28,18 @@ const Navbar = () => {
             ></FontAwesomeIcon>
           </li>
           <li>
+            <FontAwesomeIcon
+              className="icon fa-2xl"
+              icon={faCirclePlus}
+            ></FontAwesomeIcon>
+          </li>
+          <li>
             <NavLink to="/wantlist">
               <FontAwesomeIcon
                 className="icon fa-2xl"
-                icon={faCirclePlus}
+                icon={faBookmark}
               ></FontAwesomeIcon>
             </NavLink>
-          </li>
-          <li>
-            <FontAwesomeIcon
-              className="icon fa-2xl"
-              icon={faBookmark}
-            ></FontAwesomeIcon>
           </li>
         </ul>
       </nav>
