@@ -1,15 +1,15 @@
 import HeaderHero from "../../components/HeaderHero/HeaderHero";
 import Info from "../../components/Info/Info";
 import WantComicList from "../../components/WantComicList/WantComicList";
-import HomeStyles from "../home/HomeStyles";
+import HomeStyled from "../home/HomeStyled";
 
 const SelectedComiclist = () => {
   return (
-    <HomeStyles>
+    <HomeStyled>
       <HeaderHero />
       <Info />
       <WantComicList />
-    </HomeStyles>
+    </HomeStyled>
   );
 };
 export default SelectedComiclist;
