@@ -1,4 +1,4 @@
-import TabReviewStyled from "./TabReview.styled";
+import TabReviewStyled from "./TabReviewStyles";
 
 const TabReview = () => {
   return (
