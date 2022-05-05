@@ -4,30 +4,20 @@ import Comic from "./Comic";
 import { MemoryRouter } from "react-router-dom";
 
 describe("Given a Card component function", () => {
-  describe("When invoked with an imageUrl", () => {
-    test("Then it should render an image with a src propriety with the same imageUrl inside", () => {
-      const imageUrl =
-        "https://www.milcomics.com/1254117-large_default/el-imparable-spiderman-01.jpg";
-      const expectedImgSrc =
-        "https://www.milcomics.com/1254117-large_default/el-imparable-spiderman-01.jpg";
-
-      render(<Comic imageUrl={imageUrl} />, { wrapper: MemoryRouter });
-
-      const imageElement = screen.getByRole("img");
-
-      expect(imageElement.src).toEqual(expectedImgSrc);
-    });
-  });
-
   describe("When invoked with a title property text'Spiderman'", () => {
     test("Then it should render an h3 element with the test 'Spiderman' inside", () => {
-      const title = "Spiderman";
+      const comic = {
+        title: "Spiderman",
+        thumbnail: {
+          path: "/title",
+        },
+      };
 
-      render(<Comic title={title} />, { wrapper: MemoryRouter });
+      render(<Comic comic={comic} />, { wrapper: MemoryRouter });
 
-      const expectedText = screen.getByText(title);
+      const expectedImage = screen.getByRole("img");
 
-      expect(expectedText).toBeInTheDocument();
+      expect(expectedImage).toBeInTheDocument();
     });
   });
 });
