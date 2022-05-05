@@ -9,7 +9,7 @@ const ComicList = () => {
   return (
     <StyledComicList className="comic-list">
       {comics.map((comic) => {
-        return <Comic key={comic.id} comic={comic} selected={true} />;
+        return <Comic key={comic.id} comic={comic} selected={false} />;
       })}
     </StyledComicList>
   );

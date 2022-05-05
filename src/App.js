@@ -13,10 +13,14 @@ import { useEffect } from "react";
 import SelectedComiclist from "./pages/SelectedComictlist/SelectedComiclist";
 
 function App() {
-  const { loadComicsAPI } = useAPI();
+  const { loadComicsAPI, loadLocalAPI } = useAPI();
   useEffect(() => {
     loadComicsAPI();
   }, [loadComicsAPI]);
+
+  useEffect(() => {
+    loadLocalAPI();
+  }, [loadLocalAPI]);
 
   return (
     <div className="App">

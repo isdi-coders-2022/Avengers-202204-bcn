@@ -5,9 +5,17 @@ import ComicContext from "./ComicContext";
 const ComicContextProvider = ({ children }) => {
   const [comics, dispatch] = useReducer(comicsReducer, []);
   const [myComics, myComicsDispatch] = useReducer(comicsReducer, []);
+  const [myAPIComics, myAPIComicsDispatch] = useReducer(comicsReducer, []);
   return (
     <ComicContext.Provider
-      value={{ comics, dispatch, myComics, myComicsDispatch }}
+      value={{
+        comics,
+        dispatch,
+        myComics,
+        myComicsDispatch,
+        myAPIComics,
+        myAPIComicsDispatch,
+      }}
     >
       {children}
     </ComicContext.Provider>

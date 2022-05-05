@@ -5,6 +5,11 @@ export const loadComicsAction = (comics) => ({
   comics,
 });
 
+export const loadMyAPIComicsAction = (myLocalComics) => ({
+  type: actionsTypes.loadMyAPIComics,
+  myLocalComics,
+});
+
 export const fetchComicDetailAction = (comic) => ({
   type: actionsTypes.fetchCommicDetails,
   comic,

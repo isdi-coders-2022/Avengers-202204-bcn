@@ -4,12 +4,12 @@ import Comic from "../Comic/Comic";
 import StyledComicList from "../ComicList/ComicList.styled";
 
 const WantComicList = () => {
-  const { myComics } = useContext(ComicContext);
+  const { myAPIComics } = useContext(ComicContext);
 
   return (
     <StyledComicList className="comic-list">
-      {myComics.map((comic) => {
-        return <Comic key={comic.id} comic={comic} selected={true} />;
+      {myAPIComics.map((comic) => {
+        return <Comic key={comic.id} comic={comic} selected={false} />;
       })}
     </StyledComicList>
   );
