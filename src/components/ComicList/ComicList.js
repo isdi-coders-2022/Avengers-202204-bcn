@@ -4,7 +4,7 @@ import Comic from "../Comic/Comic";
 import StyledComicList from "./ComicList.styled";
 
 const ComicList = () => {
-  const { comics, dispatch } = useContext(ComicContext);
+  const { comics } = useContext(ComicContext);
 
   return (
     <StyledComicList className="comic-list">
