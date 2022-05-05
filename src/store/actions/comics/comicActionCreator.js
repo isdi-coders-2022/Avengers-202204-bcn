@@ -6,6 +6,11 @@ export const loadComicsAction = (comics) => ({
   comics,
 });
 
+export const fetchComicDetailAction = (comic) => ({
+  type: actionTypes.fetchCommicDetails,
+  comic,
+});
+
 export const addComicAction = (comic) => ({
   type: actionsTypes.addComic,
   comic,

@@ -3,7 +3,7 @@ import Info from "../../components/Info/Info";
 import WantComicList from "../../components/WantComicList/WantComicList";
 import HomeStyles from "../home/Home.styled";
 
-const Wantlist = () => {
+const SelectedComiclist = () => {
   return (
     <HomeStyles>
       <HeaderHero />
@@ -12,4 +12,4 @@ const Wantlist = () => {
     </HomeStyles>
   );
 };
-export default Wantlist;
+export default SelectedComiclist;

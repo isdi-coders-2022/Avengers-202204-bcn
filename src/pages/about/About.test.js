@@ -3,6 +3,8 @@ import "@testing-library/jest-dom";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./About";
+import APIContextProvider from "../../store/contexts/APIContextProvider";
+import ComicContextProvider from "../../store/contexts/ComicContextProvider";
 
 describe("Given a component Home", () => {
   describe("When invoked with the text 'About Comics'", () => {
@@ -11,9 +13,13 @@ describe("Given a component Home", () => {
 
       render(
         <BrowserRouter>
-          <Routes>
-            <Route path="*" element={<About />}></Route>
-          </Routes>
+          <APIContextProvider>
+            <ComicContextProvider>
+              <Routes>
+                <Route path="*" element={<About />}></Route>
+              </Routes>
+            </ComicContextProvider>
+          </APIContextProvider>
         </BrowserRouter>
       );
 
