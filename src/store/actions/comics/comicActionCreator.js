@@ -1,20 +1,21 @@
-import {
-  selectedComicActionType,
-  removeComicActionType,
-  createComicActionType,
-} from "./comicActionTypes";
+import actionTypes from "../api/actionTypes";
 
-export const selectedComicActionCreator = (comicId) => ({
-  type: selectedComicActionType,
-  comicId,
+export const loadComicsAction = (comics) => ({
+  type: actionTypes.loadComics,
+  comics,
 });
 
-export const removeComicActionCreator = (comicId) => ({
-  type: removeComicActionType,
-  comicId,
-});
-
-export const createComicActionCreator = (comic) => ({
-  type: createComicActionType,
+export const addComicAction = (comic) => ({
+  type: actionTypes.addComic,
   comic,
+});
+
+export const removeComicAction = (id) => ({
+  type: actionTypes.removeComic,
+  id,
+});
+
+export const selectedComicAction = (id) => ({
+  type: actionTypes.selectedComic,
+  id,
 });

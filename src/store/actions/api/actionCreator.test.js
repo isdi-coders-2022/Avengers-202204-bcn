@@ -17,7 +17,7 @@ describe("Given a setFetchComicsAction", () => {
 
       const expectedAction = {
         type: actionTypes.fetchCommics,
-        payload: [
+        comics: [
           {
             id: 1,
             title: "Spiderman",

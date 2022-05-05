@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import md5 from "md5";
 
-const getQuery = (params) => {
+const getQuery = () => {
   const timeStamp = nanoid(8);
 
   const hash = md5(
@@ -10,8 +10,8 @@ const getQuery = (params) => {
       process.env.react_app_public_key
   );
 
-  const QUERY = `ts=${timeStamp}&apikey=${process.env.react_app_public_key}&hash=${hash}`;
-  return QUERY;
+  const query = `ts=${timeStamp}&apikey=${process.env.react_app_public_key}&hash=${hash}`;
+  return query;
 };
 
 export default getQuery;

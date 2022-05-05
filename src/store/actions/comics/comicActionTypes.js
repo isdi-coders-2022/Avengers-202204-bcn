@@ -1,3 +1,9 @@
-export const selectedComicActionType = "selected-comic";
-export const removeComicActionType = "remove-comic";
-export const createComicActionType = "create-comic";
+const actionsTypes = {
+  loadComics: "load-comic",
+  removeComic: "remove-comic",
+  selectedComic: "select-comic",
+  addComic: "add-comic",
+};
+
+export default actionsTypes;
+

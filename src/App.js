@@ -9,8 +9,15 @@ import Navbar from "./components/Navbar/Navbar";
 import Wantlist from "./pages/Wantlist/Wantlist";
 import Home from "./pages/home/Home";
 import Search from "./components/Search/Search";
+import useAPI from "./hooks/useAPI";
+import { useEffect } from "react";
 
 function App() {
+  const { loadComicsAPI } = useAPI();
+  useEffect(() => {
+    loadComicsAPI();
+  }, [loadComicsAPI]);
+
   return (
     <div className="App">
       <Layout>
