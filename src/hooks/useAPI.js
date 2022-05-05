@@ -11,7 +11,9 @@ import getQuery from "../utils/getQuery";
 const useAPI = () => {
   const query = getQuery();
 
-  const { dispatch, myAPIComicsDispatch } = useContext(ComicContext);
+  const { dispatch, dispatchComic } = useContext(ComicContext);
+
+  const { myAPIComicsDispatch } = useContext(ComicContext);
 
   const loadComicsAPI = useCallback(async () => {
     try {
@@ -36,12 +38,12 @@ const useAPI = () => {
 
         const comics = await response.json();
 
-        dispatch(fetchComicDetailAction(comics.data.results[0]));
+        dispatchComic(fetchComicDetailAction(comics.data.results[0]));
       } catch (error) {
         return error.message;
       }
     },
-    [dispatch, query]
+    [query, dispatchComic]
   );
 
   const loadLocalAPI = useCallback(async () => {

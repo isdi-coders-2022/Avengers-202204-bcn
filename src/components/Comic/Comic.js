@@ -24,7 +24,7 @@ const Comic = ({ action, selected, comic }) => {
               className="comic__image"
               src={`${splitThumbnail.join("")}.${thumbnail.extension}`}
               alt={title}
-            ></img>
+            />
           </div>
           <div className="comic__layout">
             <div className="comic__title-container">
