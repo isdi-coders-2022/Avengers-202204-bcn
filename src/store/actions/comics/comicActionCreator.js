@@ -1,4 +1,5 @@
 import actionTypes from "../api/actionTypes";
+import actionsTypes from "./comicActionTypes";
 
 export const loadComicsAction = (comics) => ({
   type: actionTypes.loadComics,
@@ -6,16 +7,16 @@ export const loadComicsAction = (comics) => ({
 });
 
 export const addComicAction = (comic) => ({
-  type: actionTypes.addComic,
+  type: actionsTypes.addComic,
   comic,
 });
 
 export const removeComicAction = (id) => ({
-  type: actionTypes.removeComic,
+  type: actionsTypes.removeComic,
   id,
 });
 
 export const selectedComicAction = (comic) => ({
-  type: actionTypes.selectedComic,
+  type: actionsTypes.selectedComic,
   comic,
 });
