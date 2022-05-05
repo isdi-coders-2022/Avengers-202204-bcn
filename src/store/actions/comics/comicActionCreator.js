@@ -1,31 +1,31 @@
-import actionsTypes from "./comicActionTypes";
+import comicActionsTypes from "./comicActionTypes";
 
 export const loadComicsAction = (comics) => ({
-  type: actionsTypes.loadComics,
+  type: comicActionsTypes.loadComics,
   comics,
 });
 
 export const loadMyAPIComicsAction = (myLocalComics) => ({
-  type: actionsTypes.loadMyAPIComics,
+  type: comicActionsTypes.loadMyAPIComics,
   myLocalComics,
 });
 
 export const fetchComicDetailAction = (comic) => ({
-  type: actionsTypes.fetchCommicDetails,
+  type: comicActionsTypes.fetchCommicDetails,
   comic,
 });
 
 export const addComicAction = (comic) => ({
-  type: actionsTypes.addComic,
+  type: comicActionsTypes.addComic,
   comic,
 });
 
 export const removeComicAction = (id) => ({
-  type: actionsTypes.removeComic,
+  type: comicActionsTypes.removeComic,
   id,
 });
 
 export const selectedComicAction = (comic) => ({
-  type: actionsTypes.selectedComic,
+  type: comicActionsTypes.selectedComic,
   comic,
 });
