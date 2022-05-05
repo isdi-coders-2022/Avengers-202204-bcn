@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useAPI from "../../hooks/useAPI";
 //import ComicContext from "../../store/contexts/ComicContext";
