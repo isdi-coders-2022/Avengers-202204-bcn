@@ -18,7 +18,7 @@ const useAPI = () => {
       // dispatchAPI(setLoadingComicsAction());
 
       const response = await fetch(
-        `http://gateway.marvel.com/v1/public/comics?${query}`
+        `https://gateway.marvel.com/v1/public/comics?${query}`
       );
 
       const comics = await response.json();
@@ -35,7 +35,7 @@ const useAPI = () => {
         //  dispatchAPI(setLoadingComicsAction());
 
         const response = await fetch(
-          `http://gateway.marvel.com/v1/public/comics/${id}?${query}`
+          `https://gateway.marvel.com/v1/public/comics/${id}?${query}`
         );
 
         const comics = await response.json();
