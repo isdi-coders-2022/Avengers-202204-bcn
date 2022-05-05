@@ -1,11 +1,6 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useAPI from "../../hooks/useAPI";
-<<<<<<< HEAD
-
-=======
-//import ComicContext from "../../store/contexts/ComicContext";
->>>>>>> 2bbe1569b6292b57f49a706fc3420a24749067dc
 import Tabs from "../Tabs/Tabs";
 import StyledComicAbout, {
   StyledAboutContainer,
