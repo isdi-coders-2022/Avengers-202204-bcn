@@ -4,16 +4,16 @@ import ComicList from "../../components/ComicList/ComicList";
 import HeaderHero from "../../components/HeaderHero/HeaderHero";
 import Info from "../../components/Info/Info";
 
-import HomeStyles from "./HomeStyles";
+import HomeStyled from "./HomeStyled";
 
 function Home() {
   return (
-    <HomeStyles>
+    <HomeStyled>
       <HeaderHero />
       <Info />
       <ComicList />
       <ButtonLoad />
-    </HomeStyles>
+    </HomeStyled>
   );
 }
 export default Home;

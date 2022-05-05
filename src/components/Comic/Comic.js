@@ -1,24 +1,22 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ComicStyles from "./Comic.styled";
 import { NavLink } from "react-router-dom";
-import { faBookmark } from "@fortawesome/free-solid-svg-icons";
-import { useContext } from "react";
-import ComicContext from "../../store/contexts/ComicContext";
-import { selectedComicAction } from "../../store/actions/comics/comicActionCreator";
+import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
+import useAPI from "../../hooks/useAPI";
 
 const Comic = ({ action, selected, comic }) => {
+  const { addComic } = useAPI();
   const { title, thumbnail } = comic;
-  const { myComicsDispatch } = useContext(ComicContext);
   const splitThumbnail = thumbnail.path.split("//");
   splitThumbnail[0] = "https://";
 
   const bookmarkAction = (event) => {
     event.preventDefault();
-    myComicsDispatch(selectedComicAction(comic));
+    addComic(comic);
   };
 
   return (
-    <ComicStyles className="col-7" onClick={action}>
+    <ComicStyles className="col-7">
       <NavLink to={`/about/${comic.id}`}>
         <div className="comic d-flex flex-column">
           <div className="comic__image-container">
@@ -37,7 +35,7 @@ const Comic = ({ action, selected, comic }) => {
           </div>
           <FontAwesomeIcon
             className={`icon ${selected ? "on" : ""} fa-2xl`}
-            icon={faBookmark}
+            icon={faCirclePlus}
             onClick={(event) => {
               bookmarkAction(event);
             }}
