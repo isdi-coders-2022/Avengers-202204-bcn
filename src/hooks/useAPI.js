@@ -21,7 +21,7 @@ const useAPI = () => {
 
   const loadComicsAPI = useCallback(async () => {
     try {
-      dispatchAPI(setLoadingAction);
+      dispatchAPI(setLoadingAction());
       const response = await fetch(
         `https://gateway.marvel.com/v1/public/comics?${query}`
       );
@@ -32,7 +32,7 @@ const useAPI = () => {
     } catch (error) {
       return error.message;
     }
-    dispatchAPI(unsetLoadingAction);
+    dispatchAPI(unsetLoadingAction());
   }, [dispatch, dispatchAPI, query]);
 
   const getComicDetailAPI = useCallback(

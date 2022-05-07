@@ -11,6 +11,13 @@ const apiReducer = (apiStatus, action) => {
       };
       break;
 
+    case actionsTypes.unsetLoading:
+      newApiStatus = {
+        ...apiStatus,
+        loading: false,
+      };
+      break;
+
     default:
       newApiStatus = { ...apiStatus };
   }
