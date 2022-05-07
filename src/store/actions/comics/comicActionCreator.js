@@ -10,8 +10,8 @@ export const loadMyAPIComicsAction = (myLocalComics) => ({
   myLocalComics,
 });
 
-export const fetchComicDetailAction = (comic) => ({
-  type: comicActionTypes.fetchCommicDetails,
+export const getComicDetailAction = (comic) => ({
+  type: comicActionTypes.getCommicDetails,
   comic,
 });
 
