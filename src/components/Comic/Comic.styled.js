@@ -27,6 +27,11 @@ const ComicStyles = styled.div`
       top: 4%;
       color: #fff;
     }
+
+    .icon:active {
+      color: grey;
+      transform: scale(1.2);
+    }
     .on {
       color: #183154;
     }

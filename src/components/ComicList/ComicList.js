@@ -8,7 +8,7 @@ const ComicList = () => {
 
   return (
     <ComicListStyled className="comic-list">
-      {comics.map((comic) => {
+      {comics.apiComics.map((comic) => {
         return <Comic key={comic.id} comic={comic} selected={false} />;
       })}
     </ComicListStyled>
