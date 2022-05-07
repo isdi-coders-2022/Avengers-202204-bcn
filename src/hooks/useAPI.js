@@ -13,8 +13,6 @@ const useAPI = () => {
 
   const { dispatch, dispatchComic } = useContext(ComicContext);
 
-  const { myAPIComicsDispatch } = useContext(ComicContext);
-
   const loadComicsAPI = useCallback(async () => {
     try {
       const response = await fetch(
@@ -52,11 +50,11 @@ const useAPI = () => {
 
       const myApiComics = await response.json();
 
-      myAPIComicsDispatch(loadMyAPIComicsAction(myApiComics));
+      dispatch(loadMyAPIComicsAction(myApiComics));
     } catch (error) {
       return error.message;
     }
-  }, [myAPIComicsDispatch]);
+  }, [dispatch]);
 
   const addComic = async (comic) => {
     await fetch(`https://becomics.onrender.com/comics/`, {

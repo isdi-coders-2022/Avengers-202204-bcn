@@ -5,11 +5,11 @@ const comicsReducer = (currentComics, action) => {
 
   switch (action.type) {
     case comicActionTypes.loadComics:
-      newComics = [...action.comics];
+      newComics = { ...currentComics, apiComics: action.comics };
       break;
 
     case comicActionTypes.loadMyAPIComics:
-      newComics = [...action.myLocalComics];
+      newComics = { ...currentComics, localApiComics: action.myLocalComics };
       break;
 
     case comicActionTypes.selectedComic:
