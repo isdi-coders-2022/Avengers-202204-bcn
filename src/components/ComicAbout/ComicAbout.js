@@ -1,6 +1,8 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useAPI from "../../hooks/useAPI";
+import ComicContext from "../../store/contexts/ComicContext";
+import HeaderHero from "../HeaderHero/HeaderHero";
 import Tabs from "../Tabs/Tabs";
 import StyledComicAbout, {
   StyledAboutContainer,
@@ -12,26 +14,34 @@ import StyledComicAbout, {
 const ComicAbout = () => {
   let { id } = useParams();
 
-  const { fetchComicDetailAPI } = useAPI();
+  const { getComicDetailAPI } = useAPI();
 
   useEffect(() => {
-    fetchComicDetailAPI(id);
-  }, [fetchComicDetailAPI, id]);
+    getComicDetailAPI(id);
+  }, [getComicDetailAPI, id]);
+
+  const { comic } = useContext(ComicContext);
 
   return (
     <>
-      <StyledComicAbout>
-        <img src="/assets/Alien.jpeg" className="comic-image" alt="Alien" />
+      {typeof comic !== "undefined" && (
+        <>
+          <HeaderHero comic={comic} />
 
-        <StyledBackgroundFilter />
-        <StyledDivContainer>
-          <StyledTitle>Alien</StyledTitle>
-        </StyledDivContainer>
+          <StyledComicAbout>
+            <img src="/assets/Alien.jpeg" className="comic-image" alt="Alien" />
 
-        <StyledAboutContainer>
-          <Tabs />
-        </StyledAboutContainer>
-      </StyledComicAbout>
+            <StyledBackgroundFilter />
+            <StyledDivContainer>
+              <StyledTitle>Alien</StyledTitle>
+            </StyledDivContainer>
+
+            <StyledAboutContainer>
+              <Tabs />
+            </StyledAboutContainer>
+          </StyledComicAbout>
+        </>
+      )}
     </>
   );
 };

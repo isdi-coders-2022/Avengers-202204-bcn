@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
+
 import HeaderHeroStyles from "./HeaderHeroStyles";
 
-const HeaderHero = () => {
+const HeaderHero = ({ comic }) => {
   const [imageActive, setImageActive] = useState(false);
 
   const location = useLocation();

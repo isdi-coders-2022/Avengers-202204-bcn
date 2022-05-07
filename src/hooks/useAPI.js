@@ -1,6 +1,6 @@
 import { useCallback, useContext } from "react";
 import {
-  fetchComicDetailAction,
+  getComicDetailAction,
   loadComicsAction,
   loadMyAPIComicsAction,
 } from "../store/actions/comics/comicActionCreator";
@@ -29,7 +29,7 @@ const useAPI = () => {
     }
   }, [dispatch, query]);
 
-  const fetchComicDetailAPI = useCallback(
+  const getComicDetailAPI = useCallback(
     async (id) => {
       try {
         const response = await fetch(
@@ -38,7 +38,7 @@ const useAPI = () => {
 
         const comics = await response.json();
 
-        dispatchComic(fetchComicDetailAction(comics.data.results[0]));
+        dispatchComic(getComicDetailAction(comics.data.results[0]));
       } catch (error) {
         return error.message;
       }
@@ -79,7 +79,7 @@ const useAPI = () => {
 
   return {
     loadComicsAPI,
-    fetchComicDetailAPI,
+    getComicDetailAPI,
     loadLocalAPI,
     addComic,
     deleteComic,

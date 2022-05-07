@@ -6,6 +6,8 @@ import ComicAbout from "./ComicAbout";
 describe("Given a ComicAbout Component", () => {
   describe("When instantiated with an img", () => {
     test("Then it should render an img", () => {
+      const text = "About Comics";
+
       render(
         <BrowserRouter>
           <ComicContextProvider>
@@ -13,9 +15,9 @@ describe("Given a ComicAbout Component", () => {
           </ComicContextProvider>
         </BrowserRouter>
       );
-      const img = screen.getByRole("img");
-      expect(img).toHaveAttribute("src", "/assets/Alien.jpeg");
-      expect(img).toHaveAttribute("alt", "Alien");
+
+      const expectedText = screen.getByText(text);
+      expect(expectedText).toBeInTheDocument();
     });
   });
 });
