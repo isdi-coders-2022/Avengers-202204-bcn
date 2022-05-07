@@ -5,6 +5,7 @@ import HeaderHero from "../../components/HeaderHero/HeaderHero";
 import Info from "../../components/Info/Info";
 
 import HomeStyled from "./HomeStyled";
+import { DotSpinner } from "@uiball/loaders";
 
 function Home() {
   return (
@@ -12,6 +13,8 @@ function Home() {
       <HeaderHero />
       <Info />
       <ComicList />
+
+      <DotSpinner size={40} speed={0.9} color="black" />
       <ButtonLoad />
     </HomeStyled>
   );
