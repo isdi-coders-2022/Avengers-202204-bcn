@@ -11,6 +11,7 @@ import Search from "./components/Search/Search";
 import useAPI from "./hooks/useAPI";
 import { useEffect } from "react";
 import SelectedComiclist from "./pages/SelectedComictlist/SelectedComiclist";
+import FormPage from "./pages/formPage/FormPage";
 
 function App() {
   const { loadComicsAPI } = useAPI();
@@ -26,6 +27,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/about/:id" element={<About />} />
           <Route path="/selected" element={<SelectedComiclist />} />
+          <Route path="/form" element={<FormPage />} />
         </Routes>
       </Layout>
       <Search active={false} />
