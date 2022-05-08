@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ComicStyles = styled.div`
+const ComicStyles = styled.li`
   .comic {
     position: relative;
     box-shadow: 0 0 10px 5px;
@@ -27,6 +27,12 @@ const ComicStyles = styled.div`
       top: 4%;
       color: #fff;
     }
+
+    .icon:active {
+      color: grey;
+      transform: scale(1.2);
+    }
+
     .on {
       color: #183154;
     }
