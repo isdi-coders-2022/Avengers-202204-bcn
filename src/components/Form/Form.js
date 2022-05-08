@@ -2,73 +2,75 @@ import { useState } from "react";
 import ButtonText from "../ButtonText/ButtonText";
 import FormStyles from "./FormStyles";
 
-const Form = () => {
-  const [show, setShow] = useState(true);
+const Form = ({ createComic }) => {
   const [comic, setComic] = useState({
     title: "",
     type: "",
     character: "",
     description: "",
   });
+  const handleChange = (event) => {
+    setComic(event.target.value);
+  };
+
+  const addComic = (event) => {
+    event.preventDefault();
+    createComic({
+      content: comic,
+      important: Math.random() > 0.5,
+    });
+
+    setComic("");
+  };
+
   return (
     <FormStyles>
-      {show ? (
-        <div>
-          <form action="url">
-            <label htmlFor="title">
-              Comic Title:
-              <input
-                onChange={(event) =>
-                  setComic({ ...comic, title: event.target.value })
-                }
-                value={comic.title}
-                id="title"
-                type="text"
-                placeholder="Text"
-              />
-            </label>
-            <label htmlFor="type">
-              Comic Type:
-              <input
-                onChange={(event) =>
-                  setComic({ ...comic, type: event.target.value })
-                }
-                value={comic.type}
-                id="type"
-                type="text"
-                placeholder="Text"
-              />
-            </label>
-            <label htmlFor="character">
-              Main Character Name:
-              <input
-                onChange={(event) =>
-                  setComic({ ...comic, character: event.target.value })
-                }
-                value={comic.character}
-                id="character"
-                type="text"
-                placeholder="Text"
-              />
-            </label>
-            <label htmlFor="description">
-              Description:
-              <textarea
-                onChange={(event) =>
-                  setComic({ ...comic, description: event.target.value })
-                }
-                value={comic.description}
-                id="description"
-                cols="30"
-                rows="7"
-                placeholder="Text"
-              ></textarea>
-            </label>
-            <ButtonText type="submit" text={"CREATE"} />
-          </form>
-        </div>
-      ) : null}
-      <button onClick={() => setShow(true)}>show</button>
+      <div className="formDiv">
+        <form onSubmit={addComic}>
+          <label htmlFor="title">
+            Comic Title:
+            <input
+              onChange={handleChange}
+              value={comic.title}
+              id="title"
+              type="text"
+              placeholder="Text to write"
+            />
+          </label>
+          <label htmlFor="type">
+            Comic Type:
+            <input
+              onChange={handleChange}
+              value={comic.type}
+              id="type"
+              type="text"
+              placeholder="Text"
+            />
+          </label>
+          <label htmlFor="character">
+            Main Character Name:
+            <input
+              onChange={handleChange}
+              value={comic.character}
+              id="character"
+              type="text"
+              placeholder="Text"
+            />
+          </label>
+          <label htmlFor="description">
+            Description:
+            <textarea
+              onChange={handleChange}
+              value={comic.description}
+              id="description"
+              cols="30"
+              rows="7"
+              placeholder="Text"
+            ></textarea>
+          </label>
+          <ButtonText type="submit" text={"CREATE"} />
+        </form>
+      </div>
     </FormStyles>
   );
 };
