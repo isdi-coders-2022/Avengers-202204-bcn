@@ -1,6 +1,5 @@
 import { useState } from "react";
 import TabAbout from "./TabAbout/TabAbout";
-import TabReview from "./TabReview/TabReview";
 
 import TabsStyles from "./TabsStyles";
 
@@ -8,8 +7,6 @@ const Tabs = () => {
   const [activeTab, setActiveTab] = useState("aboutComic");
 
   const handleAboutComic = () => setActiveTab("aboutComic");
-
-  const handleReviews = () => setActiveTab("reviews");
 
   return (
     <TabsStyles className="Tabs">
@@ -20,17 +17,9 @@ const Tabs = () => {
         >
           About Comics
         </li>
-
-        <li
-          className={activeTab === "reviews" ? "active" : ""}
-          onClick={handleReviews}
-        >
-          Reviews
-        </li>
       </ul>
-
       <div className="outlet">
-        {activeTab === "aboutComic" ? <TabAbout /> : <TabReview />}
+        {activeTab === "aboutComic" ? <TabAbout /> : ""}
       </div>
     </TabsStyles>
   );
