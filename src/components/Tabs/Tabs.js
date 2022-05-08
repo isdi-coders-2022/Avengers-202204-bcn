@@ -2,7 +2,7 @@ import { useState } from "react";
 import TabAbout from "./TabAbout/TabAbout";
 import TabReview from "./TabReview/TabReview";
 
-import TabsStyles from "./Tabs.styled";
+import TabsStyles from "./TabsStyles";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("aboutComic");

@@ -2,7 +2,7 @@ import { useState } from "react";
 import ButtonText from "../ButtonText/ButtonText";
 import FormStyles from "./FormStyles";
 
-const FormText = () => {
+const Form = () => {
   const [show, setShow] = useState(true);
   const [comic, setComic] = useState({
     title: "",
@@ -72,4 +72,4 @@ const FormText = () => {
     </FormStyles>
   );
 };
-export default FormText;
+export default Form;
