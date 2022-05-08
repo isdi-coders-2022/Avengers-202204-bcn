@@ -3,6 +3,7 @@ import "@testing-library/jest-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Wantlist from "./SelectedComiclist";
 import ComicContextProvider from "../../store/contexts/ComicContextProvider";
+import APIContextProvider from "../../store/contexts/APIContextProvider";
 
 describe("Given a component Home", () => {
   describe("When invoked with the text 'Comic Type:'", () => {
@@ -11,11 +12,13 @@ describe("Given a component Home", () => {
 
       render(
         <BrowserRouter>
-          <ComicContextProvider>
-            <Routes>
-              <Route path="*" element={<Wantlist />}></Route>
-            </Routes>
-          </ComicContextProvider>
+          <APIContextProvider>
+            <ComicContextProvider>
+              <Routes>
+                <Route path="*" element={<Wantlist />}></Route>
+              </Routes>
+            </ComicContextProvider>
+          </APIContextProvider>
         </BrowserRouter>
       );
 
