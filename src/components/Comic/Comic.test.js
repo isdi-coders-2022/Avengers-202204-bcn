@@ -4,6 +4,7 @@ import Comic from "./Comic";
 import { BrowserRouter } from "react-router-dom";
 
 import ComicContextProvider from "../../store/contexts/ComicContextProvider";
+import APIContextProvider from "../../store/contexts/APIContextProvider";
 
 describe("Given a Comic component function", () => {
   describe("When invoked with a title property text'Spiderman'", () => {
@@ -17,9 +18,11 @@ describe("Given a Comic component function", () => {
 
       render(
         <BrowserRouter>
-          <ComicContextProvider>
-            <Comic comic={comic} />
-          </ComicContextProvider>
+          <APIContextProvider>
+            <ComicContextProvider>
+              <Comic comic={comic} />
+            </ComicContextProvider>
+          </APIContextProvider>
         </BrowserRouter>
       );
 
