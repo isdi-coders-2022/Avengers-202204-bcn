@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "./App";
 
 import ComicContextProvider from "./store/contexts/ComicContextProvider";
+import APIContextProvider from "./store/contexts/APIContextProvider";
 
 describe("Given a component Home", () => {
   describe("When invoked with the text 'Comics List'", () => {
@@ -14,11 +15,13 @@ describe("Given a component Home", () => {
 
       render(
         <BrowserRouter>
-          <ComicContextProvider>
-            <Routes>
-              <Route path="*" element={<App />}></Route>
-            </Routes>
-          </ComicContextProvider>
+          <APIContextProvider>
+            <ComicContextProvider>
+              <Routes>
+                <Route path="*" element={<App />}></Route>
+              </Routes>
+            </ComicContextProvider>
+          </APIContextProvider>
         </BrowserRouter>
       );
 
