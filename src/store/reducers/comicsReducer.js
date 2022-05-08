@@ -12,12 +12,8 @@ const comicsReducer = (currentComics, action) => {
       newComics = { ...currentComics, localApiComics: action.myLocalComics };
       break;
 
-    case comicActionTypes.selectedComic:
-      newComics = [...currentComics, action.comic];
-      break;
-
     default:
-      newComics = [...currentComics];
+      newComics = { ...currentComics };
   }
 
   return newComics;

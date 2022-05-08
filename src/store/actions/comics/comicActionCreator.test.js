@@ -1,17 +1,20 @@
-import { removeComicAction, selectedComicAction } from "./comicActionCreator";
+import { addComicAction, removeComicAction } from "./comicActionCreator";
 import comicActionTypes from "./comicActionTypes";
 
-describe("Given a selectedComicAction", () => {
+describe("Given a addComicAction", () => {
   describe("When it receives an id:2", () => {
     test("Then it should return an action with type 'selected-comic' and comicId=2", () => {
-      const comic = 2;
-
-      const expectedAction = {
-        type: comicActionTypes.selectedComic,
-        comic: 2,
+      const comic = {
+        id: 1,
+        title: "Spiderman",
       };
 
-      const action = selectedComicAction(comic);
+      const expectedAction = {
+        type: comicActionTypes.addComic,
+        comic,
+      };
+
+      const action = addComicAction(comic);
 
       expect(action).toEqual(expectedAction);
     });
