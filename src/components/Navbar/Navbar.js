@@ -28,10 +28,12 @@ const Navbar = () => {
             ></FontAwesomeIcon>
           </li>
           <li>
-            <FontAwesomeIcon
-              className="icon fa-2xl"
-              icon={faCirclePlus}
-            ></FontAwesomeIcon>
+            <NavLink to="/form">
+              <FontAwesomeIcon
+                className="icon fa-2xl"
+                icon={faCirclePlus}
+              ></FontAwesomeIcon>
+            </NavLink>
           </li>
           <li>
             <NavLink to="/selected">
