@@ -1,10 +1,10 @@
-import TabReviewStyled from "./TabReviewStyles";
+import TabReviewStyles from "./TabReviewStyles";
 
 const TabReview = () => {
   return (
-    <TabReviewStyled className="TabReview">
+    <TabReviewStyles className="TabReview">
       <p>Silvia told us to do this only if we have time.. </p>
-    </TabReviewStyled>
+    </TabReviewStyles>
   );
 };
 export default TabReview;

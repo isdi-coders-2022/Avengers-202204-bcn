@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import useAPI from "../../hooks/useAPI";
 
-const Comic = ({ action, selected, comic }) => {
+const Comic = ({ selected, comic }) => {
   const { addComic } = useAPI();
   const { title, thumbnail } = comic;
   const splitThumbnail = thumbnail.path.split("//");
