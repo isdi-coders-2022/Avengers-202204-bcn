@@ -74,7 +74,7 @@ const useAPI = () => {
     });
   };
 
-  const deleteComic = async () => {
+  const deleteComic = async (id) => {
     await fetch(`https://becomics.onrender.com/comics/`, {
       method: "DELETE",
       headers: {
